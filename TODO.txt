@@ -1,0 +1,4 @@
+Move Colors to Root of Css as Variables
+Mobile Design
+Add a Logo of a Snowflake/Sun Before Aydin Clima Brand
+Finalize Button Hover and Click Styles
