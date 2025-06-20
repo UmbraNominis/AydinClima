@@ -1,3 +1,8 @@
+:root {
+    --primary-color: #16348f;
+    --accent-color: #c84536;
+}
+
 * {
     z-index: 1; /* Set Every Elements z-index to 1 so they Appear Over the Half Blurred Hero Image*/
     font-family: Arial, Helvetica, sans-serif;
@@ -116,8 +121,8 @@ body {
 }
 
 .hero-button {
-    background-color: #c84536;
-    border: solid #c84536 2px;
+    background-color: var(--accent-color);
+    border: solid var(--accent-color) 2px;
     font-size: 2.5rem;
     width: fit-content;
     padding: 0.5em;
