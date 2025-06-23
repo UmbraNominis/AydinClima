@@ -1,5 +1,5 @@
-Move Colors to Root of Css as Variables
-Mobile Design
+Refactor
+Mobile Design Lndscape Design
 Nav Links Underline with accent color using Before css Animation
 Add a Logo of a Snowflake/Sun Before Aydin Clima Brand
 Finalize Button Hover and Click Styles

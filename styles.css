@@ -16,14 +16,31 @@ body {
 
 /* #region NavBar */
 .nav {
+    position: absolute;
+    width: 100vw;
+    max-width: 100%; /* Removes Scroll Bar when using 100 vw */
     display: flex;
     justify-content: space-between;
+
+    z-index: 2; /* Places Nav Above the Hero Section */
 }
 
-.nav-brand {
-    margin-left: 28px;
-    color: red;
+.nav-brand-text {
+    color: white;
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    font-weight: 500;
+    margin-top: 2vh;
+    margin-bottom: 0;
+    margin-left: 1vh;
 }
+
+.nav-brand-logo {
+    max-width: 100%;
+    max-height: auto;
+    height: clamp(3rem, 7vw, 6rem);
+    vertical-align: middle;
+}
+
 
 .nav-links {
     display: flex;
@@ -32,31 +49,50 @@ body {
 }
 
 .nav-text {
+    position: relative;
     color: white;
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 700;
     border: solid 2px transparent;
     border-radius: 10px;
     padding: 0.25em;
-    transition: background-color 0.25s;
+    transition: border-color 0.25s;
 }
 
-.nav-text:hover {
-    border-color: #c84536;
-    background-color: #c84536;
+@media only screen and (max-width:  1156px) {
+    .nav-text {
+        display: none;
+    }
+
+    .ac-best-selling {
+    }
 }
 
-.nav-brand-text {
-    color: white;
-    font-size: 2rem;
-    font-weight: 600;
+.nav-text::before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--accent-color);
+    transform: scaleY(1);
+    transition: transform 1s ease;
+}
+
+.nav-text:hover::before {
+    transform: scaleY(10);
 }
 /* #endregion */
 
 /* #region Hero */
 .hero {
+    position: relative; /* For Nav */
+
     height: 100vh;
-    width: 100%;
+    width: 100vw;
+    max-width: 100%; /* Removes Scroll Bar when using 100 vw */
 
     display: flex;
     flex-direction: column;
@@ -65,19 +101,35 @@ body {
     background-size: cover;
     background-position: center right;
     background-repeat: no-repeat;
+    background-attachment: scroll;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width:  1156px) {
+
+  .hero {
+    background-size: 190vh;
+    background-position: 80% 50%;
+    background-repeat: repeat;
+    background-attachment: scroll;
+  }  
+
   .hero::before {
     content: '';
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: blue;
+    background-color: #16348f90;
+
+    filter: brightness(60%);
+    backdrop-filter: blur(2px); /* Apply a Blur */
+    mask-image: linear-gradient(to top, black 50%, transparent 80%); /* Make the Gradient End at the End of the First Gradient Element*/
+    
+    -webkit-backdrop-filter: blur(2px); /* Apply a Blur for Safari*/
+    -webkit-mask-image: linear-gradient(to top, black 50%, transparent 80%); /* Make the Gradient End at the End of the First Gradient Element for Safari*/
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width:  1156px) {
   .hero::before {
     content: '';
     position: absolute;
@@ -100,35 +152,68 @@ body {
     flex-direction: column;
     justify-content: center;
     margin-left: 28px;
-    font-weight: 700;
+}
+
+@media only screen and (max-width:  1156px) {
+    .hero-text {
+        margin-left: 0px;
+        padding-top: 30vh;
+    }
 }
 
 .hero-title {
     color: white;
-    font-size: 4.1rem;
-    font-weight: bolder;
+    font-size: clamp(2.2em, 5vh, 4.1em);
+    font-weight: 900;
     max-width: 40%;
-    /* text-transform: uppercase; */
-    margin-bottom: 32px;
+    margin-bottom: 2rem;
+}
+
+@media only screen and (max-width:  1156px) {
+    .hero-title {
+        max-width: 100%;
+        text-align: center;
+        padding-inline: 5vw;
+    }
 }
 
 .hero-subtitle {
     color: white;
-    font-size: 2em;
+    font-family: 'Segoe UI';
+    font-size: clamp(1.3em, 5vw, 1.9em);
     font-weight: 100;
-    max-width: 40%;
-    margin-bottom: 32px;
+    max-width: 35%;
+    margin-bottom: 2rem;
+    margin-top: 0;
+}
+
+@media only screen and (max-width:  1156px) {
+    .hero-subtitle {
+        max-width: 100%;
+        margin: 0;
+        text-align: center;
+        padding-inline: 5vw;
+    }
 }
 
 .hero-button {
     background-color: var(--accent-color);
     border: solid var(--accent-color) 2px;
-    font-size: 2.5rem;
+    font-size: clamp(1.6em, 7vw, 2.5em);
     width: fit-content;
-    padding: 0.5em;
+    padding: clamp(1rem, 2vw, 1.5rem);
+    margin-top: 2rem;
     border-radius: 10px;
     align-self: flex-start;
     color: white;
-    margin-top: 32px;
 }
+
+@media only screen and (max-width:  1156px) {
+    .hero-button {
+        align-self: center;
+        margin-top: auto;
+        margin-bottom: 2rem;
+    }
+}
+
 /* #endregion */
