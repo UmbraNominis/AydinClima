@@ -1,3 +1,2 @@
 Mobile Design Lndscape Design
-Nav Links Underline with accent color using Before css Animation
 Finalize Button Hover and Click Styles
