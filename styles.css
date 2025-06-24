@@ -83,7 +83,7 @@ body {
     background-size: cover;
     background-position: center right;
     background-repeat: no-repeat;
-    background-attachment: scroll;
+    background-attachment: fixed;
 }
 @media only screen and (max-width:  1156px) {
   .hero {
