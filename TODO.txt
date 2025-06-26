@@ -1,2 +1,5 @@
+Add A Call Us button to Nav Bar
+Make the Brand Text Disappear when on Mobile so that there only remains the logo, button and Hamburger Menu
+
 Mobile Design Lndscape Design
 Finalize Button Hover and Click Styles
