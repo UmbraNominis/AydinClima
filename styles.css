@@ -79,7 +79,7 @@ body {
     display: flex;
     flex-direction: column;
 
-    background-image: url("Hero.jpeg");
+    background-image: url("Resources/Images/Hero.jpeg");
     background-size: cover;
     background-position: center right;
     background-repeat: no-repeat;
