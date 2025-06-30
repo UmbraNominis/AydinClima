@@ -32,6 +32,7 @@ body {
 .outline-button:hover {
     background-color: var(--accent-color-darker);
     border-color: var(--accent-color-darker);
+    scale: 0.95;
 }
 
 /* #region NavBar */
