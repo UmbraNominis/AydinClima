@@ -107,6 +107,7 @@ body {
   .hero {
     background-size: 190vh;
     background-position: 80% 50%;
+    background-attachment: local; /* Remove Paralax Effet for Phones */
   }
 }
 
