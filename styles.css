@@ -17,6 +17,23 @@ body {
     padding: 0;
 }
 
+.outline-button {
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    border: solid 2px var(--accent-color);
+    border-radius: 10px;
+    padding: .5rem;
+    transition: .25s ease-out;
+    cursor: pointer;
+    align-content: center;
+}
+
+.outline-button:hover {
+    background-color: var(--accent-color-darker);
+    border-color: var(--accent-color-darker);
+}
+
 /* #region NavBar */
 .nav {
     position: absolute;
@@ -175,6 +192,8 @@ body {
     border-radius: 10px;
     align-self: flex-start;
     color: white;
+    transition: .2s ease-in;
+    cursor: pointer;
 }
 @media only screen and (max-width:  1156px) {
     .hero-button {
@@ -182,6 +201,12 @@ body {
         margin-top: auto;
         margin-bottom: 2rem;
     }
+}
+
+.hero-button:hover {
+    background-color: var(--accent-color-darker);
+    border-color: var(--accent-color-darker);
+    scale: 0.99;
 }
 
 /* #endregion */
