@@ -4,6 +4,7 @@
 
     --accent-color: #FF4B33;
     --accent-color-darker: #e61b00;
+    --accent-color-darkest: #b31500;
 }
 
 * {
@@ -20,8 +21,7 @@ body {
 .outline-button {
     color: white;
     font-size: 2rem;
-    font-weight: 700;
-    border: solid 2px var(--accent-color);
+    border: solid 2px var(--accent-color-darker);
     border-radius: 10px;
     padding: .5rem;
     transition: .25s ease-out;
@@ -30,8 +30,8 @@ body {
 }
 
 .outline-button:hover {
-    background-color: var(--accent-color-darker);
-    border-color: var(--accent-color-darker);
+    background-color: var(--accent-color-darkest);
+    border-color: var(--accent-color-darkest);
     scale: 0.95;
 }
 
@@ -185,8 +185,8 @@ body {
 }
 
 .hero-button {
-    background-color: var(--accent-color);
-    border: solid var(--accent-color) 2px;
+    background-color: var(--accent-color-darker);
+    border: solid var(--accent-color-darker) 2px;
     font-size: clamp(1.6em, 7vw, 2.5em);
     width: fit-content;
     padding: clamp(1rem, 2vw, 1.5rem);
@@ -206,8 +206,8 @@ body {
 }
 
 .hero-button:hover {
-    background-color: var(--accent-color-darker);
-    border-color: var(--accent-color-darker);
+    background-color: var(--accent-color-darkest);
+    border-color: var(--accent-color-darkest);
     scale: 0.99;
 }
 
