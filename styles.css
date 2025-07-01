@@ -322,6 +322,15 @@ body {
     font-size: 3rem;
 }
 
+.outline-button.normal {
+    color: black;
+    margin-block: auto;
+}
+
+.outline-button.normal:hover {
+    color: white;
+}
+
 .ac-best-selling {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
