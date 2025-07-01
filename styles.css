@@ -318,6 +318,10 @@ body {
 
 /* #endregion */
 
+.section-header {
+    font-size: 3rem;
+}
+
 .ac-best-selling {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
