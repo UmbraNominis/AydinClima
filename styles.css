@@ -47,12 +47,20 @@ body {
 /* #region NavBar */
 .nav {
     position: absolute;
+    top: 0;
     width: 100vw;
     max-width: 100%; /* Removes Scroll Bar when using 100 vw */
     display: flex;
     justify-content: space-between;
 
     z-index: 2; /* Places Nav Above the Hero Section */
+}
+
+.nav.sticky {
+    position: fixed;
+    top: 0;
+    background-color: white;
+    box-shadow: 1px 1px 1px black;
 }
 
 .nav-brand-text {
