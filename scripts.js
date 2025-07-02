@@ -11,13 +11,12 @@ hamburger.addEventListener("click", () => {
 });
 
 const nav = document.querySelector(".nav");
-console.log(nav);
-
-const watch = document.querySelector(".hero-button");
+const watch = document.createElement("div"); // Create a Div that Will be Used to Tell when the Navbar went Offscreen
+watch.setAttribute("js-scroll-watcher", ""); // Set an Attribute for Clarity
+nav.before(watch); // Place the Div Before the Navbar
 
 function observerCallback(payload){
-    console.log(payload[0].isIntersecting);
-    nav.classList.toggle("sticky", !payload[0].isIntersecting);
+    nav.classList.toggle("sticky", !payload[0].isIntersecting); // Toggle the sticky class of the Navbar depending on wether the Scroll Div is Visible
 }
 
 const observer = new IntersectionObserver(observerCallback);
