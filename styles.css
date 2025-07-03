@@ -322,6 +322,17 @@ body {
     font-size: 3rem;
 }
 
+.ac-order {
+    font-size: 2rem;
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
+    text-decoration-thickness: 2px;
+    color: black;
+    margin-bottom: 0.5vw;
+    max-width: 100%;
+    text-align: center;
+}
+
 .outline-button.normal {
     color: black;
     margin-block: auto;
