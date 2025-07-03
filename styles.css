@@ -379,3 +379,8 @@ body {
     height: auto;
     width: 100%;
 }
+
+.ac-title {
+    text-align: center;
+    font-size: 2rem;
+}
