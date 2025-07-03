@@ -336,10 +336,15 @@ body {
 .outline-button.normal {
     color: black;
     margin-block: auto;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 5px solid var(--accent-color);
+    background-color: white;
+    margin-bottom: 1vw;
 }
 
 .outline-button.normal:hover {
-    color: white;
+    scale: 1;
 }
 
 .ac-best-selling {
@@ -370,7 +375,7 @@ body {
     box-shadow: 0.5px 0.5px 3px rgb(0, 0, 0, 0.5);
 }
 
-.ac.image {
+.ac-image {
     height: auto;
     width: 100%;
 }
