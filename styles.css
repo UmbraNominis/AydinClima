@@ -62,7 +62,22 @@ body {
     top: 0;
     background-color: gray;
     box-shadow: 1px 0px 5px rgb(0, 0, 0, 50%);
-    transition: .5s ease;
+    transition: .5s;
+}
+
+.nav.sticky .nav-brand-text {
+    font-size: 2.5rem;
+}
+.nav.sticky .nav-brand-logo {
+    height: 3rem;
+}
+
+.nav.sticky .nav-phone-number {
+    font-size: 1.5rem;
+}
+
+.nav.sticky .nav-links {
+    font-size: larger;
 }
 
 .nav-brand-text {
@@ -72,6 +87,7 @@ body {
     margin-top: 2vh;
     margin-bottom: 0;
     margin-left: 1vh;
+    transition: .5s;
 }
 
 .nav-brand-logo {
@@ -79,6 +95,7 @@ body {
     max-height: auto;
     height: clamp(3rem, 7vw, 6rem);
     vertical-align: middle;
+    transition: .5s;
 }
 
 .nav-phone-number {
@@ -86,6 +103,7 @@ body {
     align-content: center;
     font-size: 2.5rem;
     align-content: center;
+    transition: .5s;
 }
 
 .nav-links {
@@ -93,6 +111,7 @@ body {
     align-items: center;
     gap: 20px;
     margin-right: 28px;
+    transition: .5s;
 }
 @media only screen and (max-width:  1156px) {
     .nav-links {
