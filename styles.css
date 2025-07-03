@@ -384,3 +384,13 @@ body {
     text-align: center;
     font-size: 2rem;
 }
+
+.ac-body {
+    padding-inline: 25%;
+}
+
+.ac-price {
+    text-align: center;
+    font-size: clamp(1.5em, 3vw, 2.5em);
+    margin-block: 1vw;
+}
