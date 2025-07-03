@@ -322,17 +322,6 @@ body {
     font-size: 3rem;
 }
 
-.ac-order {
-    font-size: 2rem;
-    text-decoration: underline;
-    text-decoration-color: var(--accent-color);
-    text-decoration-thickness: 2px;
-    color: black;
-    margin-bottom: 0.5vw;
-    max-width: 100%;
-    text-align: center;
-}
-
 .outline-button.normal {
     color: black;
     margin-block: auto;
@@ -383,14 +372,30 @@ body {
 .ac-title {
     text-align: center;
     font-size: 2rem;
+    margin-bottom: 1.5vw;
+    margin-top: 0;
 }
 
 .ac-body {
     padding-inline: 25%;
+    margin-bottom: 1.5vw;
+    margin-top: 0;
 }
 
 .ac-price {
     text-align: center;
     font-size: clamp(1.5em, 3vw, 2.5em);
-    margin-block: 1vw;
+    margin-bottom: 0.5vw;
+    margin-top: 0;
+}
+
+.ac-order {
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
+    text-decoration-thickness: 2px;
+    color: black;
+    margin-bottom: 0.5vw;
+    max-width: 100%;
+    text-align: center;
 }
