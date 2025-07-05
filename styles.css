@@ -378,7 +378,7 @@ body {
 
 .ac-body {
     text-align: center;
-    margin-bottom: 1.5vw;
+    margin-bottom: .5vw;
     margin-top: 0;
 }
 
@@ -392,7 +392,7 @@ body {
 .ac-price-sub {
     text-align: center;
     font-size: clamp(1em, 3vw, 1.5em);
-    margin-bottom: 0.5vw;
+    margin-bottom: .5vw;
     margin-top: 0;
 }
 
@@ -402,15 +402,62 @@ body {
     text-decoration-color: var(--accent-color);
     text-decoration-thickness: 2px;
     color: black;
-    margin-bottom: 0.5vw;
+    margin-bottom: .5vw;
     max-width: 100%;
     text-align: center;
 }
 
-.snow-svg {
-    color: var(--primary-color);
+.ac-svg {
+    position: absolute;
+    top: 0%;
+    left:50%;
+    transform:translate(-50%, -55%);
+    background-color: white;
+    padding-inline: 0.5rem;
 }
 
-.sun-svg {
-    color: var(--accent-color);
+.ac-svg-snow {
+    fill: var(--primary-color);
+}
+
+.ac-svg-sun {
+    fill: var(--accent-color);
+}
+
+.ac-hot-cold-cards {
+    display: flex; justify-content: space-evenly; margin-bottom: 0.5vw;
+}
+
+.ac-hot-cold-card {
+    border: 2px solid;
+    border-radius: 10px;
+    width: fit-content;
+    margin-block: 10px;
+    padding: 15px;
+    position: relative;
+}
+
+.ac-hot-cold-card-sun {
+    border-color: var(--accent-color);
+}
+
+.ac-hot-cold-card-snow {
+    border-color: var(--primary-color);
+}
+
+.ac-buttons {
+    display: flex; justify-content: space-evenly; margin-bottom: 0.5vw;
+}
+
+.ac-button {
+    background-color: var(--accent-color);
+    border-radius: 10px;
+    border: 1px solid var(--accent-color);
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+}
+
+.ac-button-svg {
+    fill: white;
 }
