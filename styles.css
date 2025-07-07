@@ -50,13 +50,13 @@ body {
     top: 0;
     width: 100vw;
     max-width: 100%; /* Removes Scroll Bar when using 100 vw */
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: auto 1fr auto;
 
     z-index: 2; /* Places Nav Above the Hero Section */
     transition: .5s ease;
 }
-
 .nav.sticky {
     position: fixed;
     top: 0;
@@ -84,6 +84,7 @@ body {
 }
 
 .nav-brand-text {
+    justify-self: start;
     color: white;
     font-size: clamp(1.5rem, 3vw, 3rem);
     font-weight: 500;
@@ -110,6 +111,7 @@ body {
 }
 
 .nav-links {
+    justify-self: end;
     display: flex;
     align-items: center;
     gap: 20px;
