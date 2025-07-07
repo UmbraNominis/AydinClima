@@ -378,6 +378,7 @@ body {
 
 .ac-body {
     text-align: center;
+    font-size: 1.2rem;
     margin-bottom: 1.5vw;
     margin-top: 0;
 }
@@ -435,6 +436,7 @@ body {
     margin-block: 10px;
     padding: 15px;
     position: relative;
+    font-size: 1.2rem;
 }
 
 .ac-hot-cold-card-sun {
