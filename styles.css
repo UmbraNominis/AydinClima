@@ -386,18 +386,21 @@ body {
     font-size: 3rem;
 }
 
-.outline-button.normal {
+.more-acs-link {
+    align-self: center;
+    font-size: 2.5rem;
     color: black;
-    margin-block: auto;
-    border: 0;
-    border-radius: 0;
+    padding: 1rem;
     border-bottom: 5px solid var(--accent-color);
-    background-color: white;
-    margin-bottom: 1vw;
+    transition: .5s ease-out;
 }
 
-.outline-button.normal:hover {
-    scale: 1;
+.more-acs-link:hover {
+    background-color: var(--accent-color-darker);
+    border-radius: 10px;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+    cursor: pointer;
 }
 
 .ac-best-selling {
