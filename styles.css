@@ -259,7 +259,7 @@ body {
 .hero {
     position: relative; /* For Nav And Gradient */
 
-    height: 100vh;
+    height: 100dvh;
     width: 100vw;
     max-width: 100%; /* Removes Scroll Bar when using 100 vw */
 
