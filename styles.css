@@ -105,9 +105,14 @@ body {
 .nav-phone-number {
     color: var(--accent-color);
     align-content: center;
-    font-size: 2rem;
+    font-size: 1.7rem;
     align-content: center;
     transition: .5s;
+}
+
+.nav-phone-svg {
+    color: var(--accent-color);
+    transition: .5s ease;
 }
 
 .nav-links {
