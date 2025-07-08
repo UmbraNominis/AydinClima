@@ -101,6 +101,8 @@ body {
     color: var(--accent-color);
     font-size: 2rem;
     transition: .5s;
+    font-weight: 800;
+    text-shadow: 1px 1px 5px rgb(0, 0, 0, 10%);
 }
 .nav.sticky .nav-phone-number {
     font-size: 1.8rem;
@@ -111,7 +113,7 @@ body {
     transition: .5s ease-out;
 }
 .nav.sticky .nav-phone-svg {
-    transform: scale(0.8);
+    transform: scale(0.9);
 }
 
 .nav-links {
