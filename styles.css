@@ -52,7 +52,7 @@ body {
     max-width: 100%; /* Removes Scroll Bar when using 100 vw */
     display: grid;
     justify-items: center;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: 1fr 1fr 1fr;
 
     z-index: 2; /* Places Nav Above the Hero Section */
     transition: .5s ease;
