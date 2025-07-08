@@ -150,8 +150,7 @@ body {
     text-shadow: 1px 1px 5px black;
 }
 .nav.sticky .nav-link:hover {
-    background-color: var(--accent-color);
-    text-shadow: 1px 1px 5px gray;
+    color: white;
 }
 
 .hamburger {
