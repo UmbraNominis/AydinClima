@@ -511,16 +511,26 @@ body {
 }
 
 .ac-buttons {
-    display: flex; justify-content: space-evenly; margin-bottom: 0.5vw;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 0.5vw;
 }
 
 .ac-button {
-    background-color: var(--accent-color);
+    background-color: var(--accent-color-darker);
     border-radius: 10px;
-    border: 1px solid var(--accent-color);
+    border: 1px solid var(--accent-color-darker);
     color: white;
     font-size: 2rem;
     padding: 10px;
+    cursor: pointer;
+    transition: .5s ease-out;
+}
+
+.ac-button:hover {
+    background-color: var(--accent-color-darkest);
+    border-color: var(--accent-color-darkest);
+    scale: 0.99;
 }
 
 .ac-button-svg {
