@@ -55,7 +55,7 @@ body {
     justify-self: start;
     color: white;
     font-size: clamp(1.6rem, 3vw, 3rem);
-    font-weight: 700;
+    font-weight: 600;
     margin: 0;
     transition: .25s ease-out;
 }
@@ -346,9 +346,8 @@ body {
 
 .hero-subtitle {
     color: white;
-    font-family: 'Segoe UI';
     font-size: clamp(1.3em, 5vw, 1.9em);
-    font-weight: 100;
+    font-weight: 500;
     max-width: 35%;
     margin-bottom: 2rem;
     margin-top: 0;
@@ -366,6 +365,7 @@ body {
     background-color: var(--accent-color-darker);
     border: solid var(--accent-color-darker) 2px;
     font-size: clamp(1.3rem, 5vw, 2.5rem);
+    font-weight: 600;
     width: fit-content;
     padding: clamp(1rem, 2vw, 1.5rem);
     border-radius: 10px;
@@ -401,6 +401,7 @@ body {
         justify-content: center;
         margin-block: 5vw;
         gap: 0.25rem;
+        text-align: center;
     }
 }
 
@@ -626,7 +627,7 @@ body {
 }
 
 .why-us-title {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
     margin-top: 0;
     text-align: center;
 
