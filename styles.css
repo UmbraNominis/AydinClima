@@ -329,7 +329,7 @@ body {
 
 .hero-title {
     color: white;
-    font-size: clamp(2.2em, 5vh, 4.1em);
+    font-size: clamp(2.5rem, 6vw, 4.1em);
     font-weight: 700;
     letter-spacing: -5;
     max-width: 40%;
