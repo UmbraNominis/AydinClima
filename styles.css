@@ -609,8 +609,8 @@ body {
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
-    border: 1px solid blue;
     padding: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
     @media only screen and (max-width:  1156px) {        
         margin: 3vw;
