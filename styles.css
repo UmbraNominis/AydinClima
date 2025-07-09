@@ -1,6 +1,7 @@
 :root {
     --primary-color: #2b6bec;
     --primary-color-transparent: #2b6bec90; 
+    --primary-color-very-transparent: #2b6bec80;
 
     --accent-color: #FF4B33;
     --accent-color-darker: #e61b00;
@@ -280,8 +281,7 @@ body {
 }
 @media only screen and (max-width:  1156px) {
   .hero {
-    background-size: 190vh;
-    background-position: 80% 50%;
+    background-position: 83% center;
     background-attachment: local; /* Remove Paralax Effet for Phones */
   }
 }
@@ -296,17 +296,14 @@ body {
     filter: brightness(60%);
     backdrop-filter: blur(15px); /* Apply a Blur */
     mask-image: linear-gradient(to right, black 35%, transparent 65%); /* Make the Gradient End at the End of the First Gradient Element*/
-    
-    -webkit-backdrop-filter: blur(15px); /* Apply a Blur for Safari*/
-    -webkit-mask-image: linear-gradient(to right, black 35%, transparent 65%); /* Make the Gradient End at the End of the First Gradient Element for Safari*/
-}
+    }
 @media only screen and (max-width:  1156px) {
   .hero::before {
-    backdrop-filter: blur(2px); /* Apply a Blur */
-    mask-image: linear-gradient(to top, black 50%, transparent 80%); /* Make the Gradient End at the End of the First Gradient Element*/
-    
-    -webkit-backdrop-filter: blur(2px); /* Apply a Blur for Safari*/
-    -webkit-mask-image: linear-gradient(to top, black 50%, transparent 80%); /* Make the Gradient End at the End of the First Gradient Element for Safari*/
+    filter: brightness(60%);
+    backdrop-filter: blur(0px);
+    mask-image: none; /* Make the Gradient End at the End of the First Gradient Element for Safari*/
+
+    background-color: var(--primary-color-very-transparent);
   }
 }
 
@@ -320,7 +317,7 @@ body {
 @media only screen and (max-width:  1156px) {
     .hero-text {
         margin-left: 0px;
-        padding-top: 30vh;
+        padding-top: 40svh;
     }
 }
 
