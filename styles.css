@@ -161,8 +161,12 @@ body {
     height: 50px;
     width: 50px;
     position: relative;
+    transition: .25s ease-out;
+    z-index: 6;
 }
-
+.nav.sticky .hamburger {
+    transform: scale(0.9);
+}
 .hamburger .bar {
     display: block;
     height:  5px;
@@ -174,7 +178,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: .3s ease;
+    transition: .25s ease-out;
 }
 
 .hamburger .bar:nth-child(1) {
@@ -188,8 +192,7 @@ body {
 
 .hamburger.active .bar:nth-child(1) {
     top: 50%;
-    transform: translate(-50%, -50%);
-    transform: rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .hamburger.active .bar:nth-child(2) {
@@ -198,7 +201,7 @@ body {
 
 .hamburger.active .bar:nth-child(3) {
     top: 50%;
-    transform: rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 @media only screen and (max-width:  1156px) {
