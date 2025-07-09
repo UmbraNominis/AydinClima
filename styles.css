@@ -18,83 +18,73 @@ body {
     padding: 0;
 }
 
-.outline-button {
-    color: white;
-    font-size: 2rem;
-    font-weight: 700;
-    border: solid 2px var(--accent-color-darker);
-    border-radius: 10px;
-    padding: .5rem;
-    transition: .25s ease-out;
-    cursor: pointer;
-    align-content: center;
-}
-
-.outline-button:hover {
-    background-color: var(--accent-color-darkest);
-    border-color: var(--accent-color-darkest);
-    scale: 0.95;
-}
-
-.outline-button.active {
-    background-color: var(--accent-color-darkest);
-    border-color: var(--accent-color-darkest);
-    scale: 0.9;
-    cursor: default;
-    opacity: 70%;
-}
-
 /* #region NavBar */
 .nav {
     position: absolute;
     top: 0;
     width: 100vw;
     max-width: 100%; /* Removes Scroll Bar when using 100 vw */
+    padding-top: 1vh;
     display: grid;
     justify-items: center;
     grid-template-columns: 1fr 1fr 1fr;
 
     z-index: 2; /* Places Nav Above the Hero Section */
-    transition: .5s ease;
+    transition: .25s ease-out;
 }
 .nav.sticky {
     position: fixed;
-    top: 0;
+    top: 0%;
     background-color: white;
     box-shadow: 1px 0px 5px rgb(0, 0, 0, 50%);
-    transition: .5s;
+    transition: .25s ease-out;
 }
-
-.nav.sticky .nav-links {
-    font-size: larger;
-    color: black;
+@media only screen and (max-width:  1156px) {
+    .nav {
+        grid-template-columns: 1fr auto;
+    }
 }
 
 .nav-brand-text {
     justify-self: start;
     color: white;
-    font-size: clamp(1.5rem, 3vw, 3rem);
+    font-size: clamp(2rem, 3vw, 3rem);
     font-weight: 700;
-    margin-top: 2vh;
-    margin-bottom: 0;
-    margin-left: 1vh;
-    transition: .5s ease-out;
+    margin: 0;
+    transition: .25s ease-out;
 }
 .nav.sticky .nav-brand-text {
-    font-size: 2.5rem;
     color: black;
-    margin-top: 1vh;
+    transform: scale(0.9);
+}
+@media only screen and (max-width:  1156px) {
+    .nav-brand-text {
+        
+    }
+    .nav.sticky .nav-brand-text {
+        margin-left: -3vw;
+    }
 }
 
 .nav-brand-logo {
     max-width: 100%;
     max-height: auto;
-    height: clamp(3rem, 7vw, 6rem);
+    height: clamp(4rem, 7vw, 6rem);
     vertical-align: middle;
-    transition: .5s ease-out;
+    transition: .25s ease-out;
 }
 .nav.sticky .nav-brand-logo {
-    transform: scale(0.8);
+}
+
+.hidden-on-mobile {
+    display: flex;
+    align-items: center;
+    gap: .1vw;  
+}
+@media only screen and (max-width:  1156px) {
+    .hidden-on-mobile {
+        display: none;
+    }
 }
 
 .nav-phone-number {
@@ -106,13 +96,26 @@ body {
 .nav.sticky .nav-phone-number {
     font-size: 1.8rem;
 }
+@media only screen and (max-width:  1156px) {
+    .nav-phone-number {
+        display: none;
+    }
+    .hidden-on-mobile {
+        display: none;
+    }
+}
 
 .nav-phone-svg {
     color: var(--accent-color);
-    transition: .5s ease-out;
+    transition: .25s ease-out;
 }
 .nav.sticky .nav-phone-svg {
     transform: scale(0.9);
+}
+@media only screen and (max-width:  1156px) {
+    .nav-phone-svg {
+        display: none;
+    }
 }
 
 .nav-links {
@@ -122,7 +125,7 @@ body {
 
     gap: 0.2vw;
     margin-right: 1vw;
-    transition: .5s ease-out;
+    transition: .25s ease-out;
 }
 @media only screen and (max-width:  1156px) {
     .nav-links {
@@ -136,7 +139,7 @@ body {
     font-weight: 500;
     color: white;
     cursor: pointer;
-    transition: .5s ease-out;
+    transition: .25s ease-out;
 }
 .nav.sticky .nav-link {
     color: black;
@@ -154,7 +157,7 @@ body {
 .hamburger {
     display: none;
     cursor: pointer;
-    margin-right: 8px;
+    margin-right: 2vw;
     height: 50px;
     width: 50px;
     position: relative;
@@ -169,8 +172,8 @@ body {
 
     position: absolute;
     top: 50%;
-    left: 0%;
-    /* transform: translate(-50%, -50%); */
+    left: 50%;
+    transform: translate(-50%, -50%);
     transition: .3s ease;
 }
 
@@ -185,6 +188,7 @@ body {
 
 .hamburger.active .bar:nth-child(1) {
     top: 50%;
+    transform: translate(-50%, -50%);
     transform: rotate(45deg);
 }
 
@@ -257,7 +261,7 @@ body {
 .hero {
     position: relative; /* For Nav And Gradient */
 
-    height: 100dvh;
+    height: 100svh;
     width: 100vw;
     max-width: 100%; /* Removes Scroll Bar when using 100 vw */
 
@@ -265,7 +269,7 @@ body {
     flex-direction: column;
 
     background-color: var(--primary-color); /* For Fallback */
-    background-image: url("Resources/Images/Hero.jpeg");
+    background-image: url("Resources/Images/Hero\ Low\ Q.webp");
     background-size: cover;
     background-position: center right;
     background-repeat: no-repeat;
@@ -379,17 +383,40 @@ body {
 
 /* #endregion */
 
+.section-header-container {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 1vw;
+    
+    @media only screen and (max-width:  1156px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-block: 5vw;
+        gap: 0.25rem;
+    }
+}
+
 .section-header {
-    font-size: 3rem;
+    font-size: clamp(2rem, 3vw, 3rem);
+    
+    @media only screen and (max-width:  1156px) {
+        margin: 0;
+    }
 }
 
 .more-acs-link {
     align-self: center;
-    font-size: 2.5rem;
+    font-size: clamp(1rem, 3vw, 2.5rem);
     color: black;
     padding: 1rem;
     border-bottom: 5px solid var(--accent-color);
-    transition: .5s ease-out;
+    transition: .25s ease-out;
+
+    @media only screen and (max-width:  1156px) {
+        margin: 0;
+        padding: 0.7rem;
+    }
 }
 
 .more-acs-link:hover {
@@ -403,19 +430,16 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 1vw;
-    grid-row-gap: 1vw;
+    row-gap: 1vw;
     padding-inline: 1vw;
-}
-@media only screen and (max-width:  1156px) {
-  .ac-best-selling {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media only screen and (max-width:  768px) {
-  .ac-best-selling {
-    grid-template-columns: 1fr;
-    grid-row-gap: 3vw;
-  }
+
+    @media only screen and (max-width:  1156px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media only screen and (max-width:  768px) {
+        grid-template-columns: 1fr;
+        row-gap: 3vw;
+    }
 }
 
 .ac-card {
@@ -425,6 +449,10 @@ body {
     display: flex; 
     flex-direction: column;
     box-shadow: .5px .5px 5px rgb(0, 0, 0, 0.5);
+
+    @media only screen and (max-width:  1156px) {
+        margin: 3vw;
+    }
 }
 
 .ac-image {
@@ -434,41 +462,42 @@ body {
 
 .ac-title {
     text-align: center;
-    font-size: 2rem;
+    font-size: clamp(1.4rem, 3vw, 2rem);
     margin-bottom: 1.5vw;
     margin-top: 0;
 }
 
-.ac-body {
-    text-align: center;
-    font-size: 1.2rem;
-    margin-bottom: 1.5vw;
-    margin-top: 0;
+.ac-hot-cold-cards {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 0.5vw;
+    
+    @media only screen and (max-width:  1156px) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-.ac-price {
-    text-align: center;
-    font-size: clamp(1.5em, 3vw, 2.5em);
-    margin-bottom: 0;
-    margin-top: 0;
+.ac-hot-cold-card {
+    border: 2px solid;
+    border-radius: 10px;
+    width: fit-content;
+    margin-block: 10px;
+    padding: 15px;
+    position: relative;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+
+    @media only screen and (max-width:  1156px) {
+        
+    }
 }
 
-.ac-price-sub {
-    text-align: center;
-    font-size: clamp(1em, 3vw, 1.5em);
-    margin-bottom: .5vw;
-    margin-top: 0;
+.ac-hot-cold-card-sun {
+    border-color: var(--accent-color);
 }
 
-.ac-order {
-    font-size: 1.5rem;
-    text-decoration: underline;
-    text-decoration-color: var(--accent-color);
-    text-decoration-thickness: 2px;
-    color: black;
-    margin-bottom: .5vw;
-    max-width: 100%;
-    text-align: center;
+.ac-hot-cold-card-snow {
+    border-color: var(--primary-color);
 }
 
 .ac-svg {
@@ -488,32 +517,50 @@ body {
     fill: var(--accent-color);
 }
 
-.ac-hot-cold-cards {
-    display: flex; justify-content: space-evenly; margin-bottom: 0.5vw;
+.ac-body {
+    text-align: center;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    margin-bottom: 1.5vw;
+    margin-top: 0;
+
+    @media only screen and (max-width:  1156px) {
+        text-align: left;
+
+    }
 }
 
-.ac-hot-cold-card {
-    border: 2px solid;
-    border-radius: 10px;
-    width: fit-content;
-    margin-block: 10px;
-    padding: 15px;
-    position: relative;
-    font-size: 1.2rem;
+.ac-body-container {
+    @media only screen and (max-width:  1156px) {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 1.5vw;
+    }
 }
 
-.ac-hot-cold-card-sun {
-    border-color: var(--accent-color);
+.ac-price {
+    text-align: center;
+    font-size: clamp(2rem, 3vw, 2.7rem);
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
-.ac-hot-cold-card-snow {
-    border-color: var(--primary-color);
+.ac-price-sub {
+    text-align: center;
+    font-size: clamp(1.3rem, 3vw, 1.5rem);
+    margin-bottom: .5vw;
+    margin-top: 0;
 }
 
 .ac-buttons {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 0.5vw;
+
+    @media only screen and (max-width:  1156px) {
+        
+    }
 }
 
 .ac-button {
@@ -521,10 +568,14 @@ body {
     border-radius: 10px;
     border: 1px solid var(--accent-color-darker);
     color: white;
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
     padding: 10px;
     cursor: pointer;
-    transition: .5s ease-out;
+    transition: .25s ease-out;
+
+    @media only screen and (max-width:  1156px) {        
+        margin-bottom: 1.5vw;
+    }
 }
 
 .ac-button:hover {
@@ -535,4 +586,44 @@ body {
 
 .ac-button-svg {
     fill: white;
+}
+
+.why-us-section {
+    padding-inline: 1vw;
+    margin-block: 5vw;
+}
+
+.why-us-cards {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 10rem;
+    margin-bottom: 5vw;
+
+    @media only screen and (max-width:  1156px) {        
+        grid-template-columns: auto;
+    }
+}
+
+.why-us-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid blue;
+    padding: 3rem;
+
+    @media only screen and (max-width:  1156px) {        
+        margin: 3vw;
+        padding: 1rem;
+    }
+}
+
+.why-us-title {
+    font-size: 2rem;
+    margin-top: 0;
+    text-align: center;
+
+    @media only screen and (max-width:  1156px) {        
+        
+    }
 }
