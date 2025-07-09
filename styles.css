@@ -8,9 +8,14 @@
     --accent-color-darkest: #b31500;
 }
 
+@font-face {
+    font-family: "montserrat";
+    src: url(Resources/Fonts/Montserrat-VariableFont_wght.ttf);
+}
+
 * {
     z-index: 1; /* Set Every Elements z-index to 1 so they Appear Over the Half Blurred Hero Image*/
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "montserrat";
     /* outline: 1px solid red; To check overflows */
 }
 
@@ -49,7 +54,7 @@ body {
 .nav-brand-text {
     justify-self: start;
     color: white;
-    font-size: clamp(2rem, 3vw, 3rem);
+    font-size: clamp(1.6rem, 3vw, 3rem);
     font-weight: 700;
     margin: 0;
     transition: .25s ease-out;
@@ -156,6 +161,7 @@ body {
 }
 
 .hamburger {
+    align-self: center;
     display: none;
     cursor: pointer;
     margin-right: 2vw;
@@ -324,10 +330,11 @@ body {
 .hero-title {
     color: white;
     font-size: clamp(2.2em, 5vh, 4.1em);
-    font-weight: 900;
+    font-weight: 700;
     letter-spacing: -5;
     max-width: 40%;
     margin-bottom: 2rem;
+    font-family: "montserrat";
 }
 @media only screen and (max-width:  1156px) {
     .hero-title {
@@ -358,7 +365,7 @@ body {
 .hero-button {
     background-color: var(--accent-color-darker);
     border: solid var(--accent-color-darker) 2px;
-    font-size: clamp(1.6em, 7vw, 2.5em);
+    font-size: clamp(1.3rem, 5vw, 2.5rem);
     width: fit-content;
     padding: clamp(1rem, 2vw, 1.5rem);
     border-radius: 10px;
