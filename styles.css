@@ -420,10 +420,12 @@ body {
     padding: 1rem;
     border-bottom: 5px solid var(--accent-color);
     transition: .25s ease-out;
+    text-decoration: none;
 
     @media only screen and (max-width:  1156px) {
         margin: 0;
         padding: 0.7rem;
+        transition: .1s ease-out;
     }
 }
 
