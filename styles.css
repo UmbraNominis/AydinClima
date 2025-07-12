@@ -15,7 +15,6 @@
 }
 
 * {
-    z-index: 1; /* Set Every Elements z-index to 1 so they Appear Over the Half Blurred Hero Image*/
     font-family: "montserrat";
     /* outline: 1px solid red; To check overflows */
 }
@@ -24,6 +23,31 @@ body {
     margin: 0;
     padding: 0;
 }
+
+/* #region Common */
+.section-header-container {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 1vw;
+    
+    @media only screen and (max-width:  1156px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-block: 5vw;
+        gap: 0.25rem;
+        text-align: center;
+    }
+}
+
+.section-header {
+    font-size: clamp(2rem, 3vw, 3rem);
+    
+    @media only screen and (max-width:  1156px) {
+        margin: 0;
+    }
+}
+/* #endregion */
 
 /* #region NavBar */
 .nav {
@@ -34,8 +58,6 @@ body {
     display: grid;
     justify-items: center;
     grid-template-columns: 1fr 1fr 1fr;
-
-    z-index: 2; /* Places Nav Above the Hero Section */
     transition: .25s ease-out;
 }
 .nav.sticky {
@@ -43,7 +65,7 @@ body {
     top: 0%;
     background-color: var(--primary-color);
     box-shadow: 1px 0px 5px rgb(0, 0, 0, 50%);
-    transition: .25s ease-out;
+    transition: .1s ease-out;
 }
 @media only screen and (max-width:  1156px) {
     .nav {
@@ -259,14 +281,12 @@ body {
 
 /* #region Hero */
 .hero {
+    z-index: -2;
     position: relative; /* For Nav And Gradient */
-
     height: 100svh;
     width: 100%;
-
     display: flex;
     flex-direction: column;
-
     background-color: var(--primary-color); /* For Fallback */
     background-image: url("Resources/Images/Hero\ Low\ Q.webp");
     background-size: cover;
@@ -282,12 +302,12 @@ body {
 }
 
 .hero::before {
+    z-index: -1;
     content: '';
     position: absolute;
     width: 100%;
     height: 100%;
     background-color: var(--primary-color-transparent);
-  
     filter: brightness(60%);
     backdrop-filter: blur(10px); /* Apply a Blur */
     mask-image: linear-gradient(to right, black 30%, transparent); /* Make the Gradient End at the End of the First Gradient Element*/
@@ -408,29 +428,7 @@ body {
 
 /* #endregion */
 
-.section-header-container {
-    display: flex;
-    justify-content: space-between;
-    padding-inline: 1vw;
-    
-    @media only screen and (max-width:  1156px) {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-block: 5vw;
-        gap: 0.25rem;
-        text-align: center;
-    }
-}
-
-.section-header {
-    font-size: clamp(2rem, 3vw, 3rem);
-    
-    @media only screen and (max-width:  1156px) {
-        margin: 0;
-    }
-}
-
+/* #region ACs */
 .more-acs-link {
     align-self: center;
     font-size: clamp(1rem, 2vw, 2.5rem);
@@ -650,7 +648,7 @@ body {
 .ac-button:hover {
     background-color: var(--accent-color-darkest);
     border-color: var(--accent-color-darkest);
-    scale: 0.99;
+    scale: 0.95;
 }
 
 .ac-button-svg {
@@ -663,7 +661,9 @@ body {
         width: 1rem;
     }
 }
+/* #endregion */
 
+/* #region WhyUs */
 .why-us-section {
     padding-inline: 1vw;
     margin-block: 5vw;
@@ -703,3 +703,4 @@ body {
         
     }
 }
+/* #endregion */
