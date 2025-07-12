@@ -490,7 +490,15 @@ body {
 .ac-title {
     text-align: center;
     font-size: clamp(1.3rem, 1.5vw, 2rem);
-    margin-bottom: 1.5vw;
+    margin-bottom: .6vw;
+    margin-top: 0;
+}
+
+.ac-brand {
+    text-align: center;
+    font-size: clamp(1rem, 1.5vw, 1.7rem);
+    font-weight: 600;
+    margin-bottom: .6vw;
     margin-top: 0;
 }
 
