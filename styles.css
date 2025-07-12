@@ -493,6 +493,12 @@ body {
     margin-bottom: .6vw;
     margin-top: 0;
 }
+/* For Small Phones */
+@media only screen and (max-width:  375px) and (max-height: 693px) {
+    .ac-title {
+        font-size: clamp(1rem, 1.5vw, 2rem);
+    }
+}
 
 .ac-brand {
     text-align: center;
@@ -500,6 +506,12 @@ body {
     font-weight: 600;
     margin-bottom: .6vw;
     margin-top: 0;
+}
+/* For Small Phones */
+@media only screen and (max-width:  375px) and (max-height: 693px) {
+    .ac-brand {
+        font-size: clamp(0.9rem, 1.5vw, 1.7rem);
+    }
 }
 
 .ac-hot-cold-cards {
@@ -521,9 +533,11 @@ body {
     padding: 15px;
     position: relative;
     font-size: clamp(0.9rem, 0.8vw, 1.2rem);
-
-    @media only screen and (max-width:  1156px) {
-        
+}
+/* For Small Phones */
+@media only screen and (max-width:  375px) and (max-height: 693px) {
+    .ac-hot-cold-card {
+        font-size: clamp(0.8rem, 0.8vw, 1.2rem);
     }
 }
 
@@ -557,10 +571,11 @@ body {
     font-size: clamp(0.9rem, 0.8vw, 1.2rem);
     margin-bottom: 1.5vw;
     margin-top: 0;
-
-    @media only screen and (max-width:  1156px) {
-        text-align: left;
-        
+}
+/* For Small Phones */
+@media only screen and (max-width:  375px) and (max-height: 693px) {
+    .ac-body {
+        font-size: clamp(0.8rem, 0.8vw, 1.2rem);
     }
 }
 
@@ -580,6 +595,12 @@ body {
     margin-bottom: 0;
     margin-top: 0;
 }
+/* For Small Phones */
+@media only screen and (max-width:  375px) and (max-height: 693px) {
+    .ac-price {
+        font-size: clamp(1.5rem, 2vw, 2.7rem);
+    }
+}
 
 .ac-price-sub {
     text-align: center;
@@ -587,15 +608,17 @@ body {
     margin-bottom: .5vw;
     margin-top: 0;
 }
+/* For Small Phones */
+@media only screen and (max-width:  375px) and (max-height: 693px) {
+    .ac-price-sub {
+        font-size: clamp(0.9rem, 2vw, 1.5rem);
+    }
+}
 
 .ac-buttons {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 0.5vw;
-
-    @media only screen and (max-width:  1156px) {
-        
-    }
 }
 
 .ac-button {
@@ -607,10 +630,18 @@ body {
     padding: 10px;
     cursor: pointer;
     transition: .25s ease-out;
-
-    @media only screen and (max-width:  1156px) {        
+}
+@media only screen and (max-width:  1156px) {   
+    .ac-button {     
         margin-block: 3vw;
         padding: 2vw;
+    }
+}
+/* For Small Phones */
+@media only screen and (max-width:  375px) and (max-height: 693px) {
+    .ac-button {
+        margin-block: 2vw;
+        font-size: clamp(1rem, 1.5vw, 1.9rem);
     }
 }
 
@@ -622,6 +653,13 @@ body {
 
 .ac-button-svg {
     fill: white;
+}
+/* For Small Phones */
+@media only screen and (max-width:  375px) and (max-height: 693px) {
+    .ac-button-svg {
+        height: auto;
+        width: 1rem;
+    }
 }
 
 .why-us-section {
