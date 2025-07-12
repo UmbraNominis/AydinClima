@@ -17,6 +17,10 @@ nav.before(watch); // Place the Div Before the Navbar
 
 function observerCallback(payload){
     nav.classList.toggle("sticky", !payload[0].isIntersecting); // Toggle the sticky class of the Navbar depending on wether the Scroll Div is Visible
+    
+    // Optimize this
+    if (!payload[0].isIntersecting) document.querySelector('meta[name="theme-color"]').setAttribute('content', '#2b6bec');
+        else document.querySelector('meta[name="theme-color"]').setAttribute('content', '#2d4470');
 }
 
 const observer = new IntersectionObserver(observerCallback);
