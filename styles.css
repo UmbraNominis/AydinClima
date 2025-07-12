@@ -59,6 +59,7 @@ body {
     justify-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     transition: .25s ease-out;
+    z-index: 1;
 }
 .nav.sticky {
     position: fixed;
@@ -181,7 +182,7 @@ body {
     width: 40px;
     position: relative;
     transition: .25s ease-out;
-    z-index: 6;
+    z-index: 3;
 }
 .nav.sticky .hamburger {
     transform: scale(0.9);
