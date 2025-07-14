@@ -1,4 +1,4 @@
-import acs from "/Data/air-conditioners.json" with { type: "json" };
+import acs from "https://umbranominis.github.io/AydinClima/Data/air-conditioners.json" with { type: "json" };
 
 const hamburger = document.querySelector(".hamburger");
 const offmenu = document.querySelector(".off-menu");
