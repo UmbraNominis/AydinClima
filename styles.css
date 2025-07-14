@@ -424,6 +424,7 @@ body {
     background-color: var(--accent-color-darker);
     border: solid var(--accent-color-darker) 2px;
     border-radius: 10px;
+    cursor: pointer;
     transition: .2s ease-in;
     will-change: transform;
 }
