@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Nordic All Easy Pro",
+        "brand": "Midea",
+        "image-url": "Resources/Air Conditioners/Midea Nordic All Easy Pro.jpg",
+        "capacity": "30 000",
+        "power-heating": "9.38 (2.70 ~ 9.73)",
+        "consumption-heating": "2.45 (0.43 ~ 2.55)",
+        "energyclass-heating": "A++",
+        "power-cooling": "8.79 (2.23 ~ 9.38)",
+        "consumption-cooling": "2.75 (0.19 ~ 3.00)",
+        "energyclass-cooling": "A++",
+        "dimensions": "275 x 1140 х 370",
+        "sound": "49.5 / 47 / 44 / 38.5",
+        "lowest-temp": "15",
+        "warranty": "36",
+        "price": "2,000"
+    }
+]
