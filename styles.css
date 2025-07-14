@@ -494,6 +494,12 @@ body {
 .ac-image {
     width: 100%;
     height: 15vw;
+    object-fit: cover;
+}
+@media only screen and (max-width:  1156px) {
+    .ac-image {
+        height: 40vw;
+    }
 }
 
 .ac-title {
