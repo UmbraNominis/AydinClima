@@ -64,13 +64,16 @@ body {
 .nav.sticky {
     position: fixed;
     top: 0%;
-    background-color: var(--primary-color);
+    background-color: white;
     box-shadow: 1px 0px 5px rgb(0, 0, 0, 50%);
-    transition: .1s ease-out;
+    transition: .25s ease-out;
 }
 @media only screen and (max-width:  1156px) {
     .nav {
         grid-template-columns: 1fr auto;
+    }
+    .nav.sticky {
+        background-color: var(--primary-color);
     }
 }
 
@@ -84,6 +87,12 @@ body {
 }
 .nav.sticky .nav-brand-text {
     transform: scale(0.9);
+    color: black;
+}
+@media only screen and (max-width:  1156px) {
+    .nav.sticky .nav-brand-text {
+        color: white;
+    }
 }
 
 .nav-brand-logo {
