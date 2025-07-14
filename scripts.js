@@ -1,4 +1,13 @@
-import acs from "https://umbranominis.github.io/AydinClima/Data/air-conditioners.json" with { type: "json" };
+let module;
+if (document.URL !== "https://umbranominis.github.io/AydinClima") {
+    module = await import ("/Data/air-conditioners.json", { with: { type: "json" } });
+}
+else {
+    module = await import ("https://umbranominis.github.io/AydinClima/Data/air-conditioners.json", { with: { type: "json" } });
+}
+
+let acs = module.default;
+
 
 const hamburger = document.querySelector(".hamburger");
 const offmenu = document.querySelector(".off-menu");
