@@ -662,6 +662,8 @@ body {
 }
 
 .ac-button-svg {
+    height: auto;
+        width: 1rem;
     fill: white;
 }
 /* For Small Phones */
