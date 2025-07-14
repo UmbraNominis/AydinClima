@@ -644,7 +644,7 @@ body {
 @media only screen and (max-width:  1156px) {   
     .ac-button {     
         margin-block: 3vw;
-        padding: 2vw;
+        padding: 1.5vw;
     }
 }
 /* For Small Phones */
