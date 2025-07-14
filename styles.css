@@ -492,8 +492,8 @@ body {
 }
 
 .ac-image {
-    height: auto;
     width: 100%;
+    height: 15vw;
 }
 
 .ac-title {
