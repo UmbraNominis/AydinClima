@@ -789,7 +789,11 @@ body {
     margin-bottom: 1vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1vw;
+    gap: 2vw;
+}
+
+.order-links .ac-button {
+    margin: 0;
 }
 
 .order-close-button {
