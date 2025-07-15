@@ -87,6 +87,8 @@ body {
     margin-block: 0;
     justify-self: start;
     align-self: center;
+    display: inline-flex;
+    align-items: center;
     font-size: clamp(1.4rem, 2vw, 3rem);
     font-weight: 600;
     color: white;
@@ -108,10 +110,8 @@ body {
 }
 
 .nav-brand-logo {
-    max-width: 100%;
-    max-height: auto;
-    height: clamp(3.6rem, 7vw, 6rem);
-    vertical-align: middle;
+    height: auto;
+    height: clamp(3.3rem, 7vw, 6rem);
     transition: .25s ease-out;
 }
 
