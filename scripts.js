@@ -10,11 +10,11 @@ let acs = module.default;
 
 
 const hamburger = document.querySelector(".hamburger");
-const offmenu = document.querySelector(".off-menu");
+const mobileMenu = document.querySelector(".mobile-menu");
 
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
-    offmenu.classList.toggle("active");
+    mobileMenu.classList.toggle("active");
 });
 
 const nav = document.querySelector(".nav");
