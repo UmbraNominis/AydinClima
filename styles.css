@@ -109,49 +109,46 @@ body {
     transition: .25s ease-out;
 }
 
-.phone-numbers {
-    display: flex;
+.nav-contact-button {
+    height: max-content;
+    padding: 10px;
+    align-self: center;
+    display: inline-flex;
     align-items: center;
-    gap: .1vw;  
-}
-@media only screen and (max-width:  1156px) {
-    .phone-numbers {
-        display: none;
-    }
-}
-
-.nav-phone-number {
+    gap: clamp(0.3rem, 1vw, 0.5rem);
+    border: 1px solid red;
+    border-radius: 10px;
     font-size: clamp(0.5rem, 1.4vw, 2rem);
+    font-weight: 500;
     color: var(--accent-color);
-    transition: .5s;
-    font-weight: 800;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .25s;
 }
 @media only screen and (max-width:  1156px) {
-    .nav-phone-number {
+    .nav-contact-button {
         display: none;
     }
 }
-
-.nav.sticky .nav-phone-number {
+.nav.sticky .nav-contact-button {
     font-size: clamp(0.5rem, 1.2vw, 2rem);
 }
-@media only screen and (max-width:  1156px) {
-    .hidden-on-mobile {
-        display: none;
-    }
+.nav-contact-button:hover {
+    background-color: var(--accent-color-darker);
+    border-color: var(--accent-color-darker);
+    color: white;
+    scale: 0.99;
 }
 
-.nav-phone-svg {
+.nav-contact-svg {
     color: var(--accent-color);
     transition: .25s ease-out;
 }
-.nav.sticky .nav-phone-svg {
+.nav.sticky .nav-contact-svg {
     transform: scale(0.9);
 }
-@media only screen and (max-width:  1156px) {
-    .nav-phone-svg {
-        display: none;
-    }
+.nav-contact-button:hover .nav-contact-svg {
+    color: white;
 }
 
 .nav-links {
@@ -441,7 +438,7 @@ body {
     border-radius: 10px;
     cursor: pointer;
     will-change: transform;
-    transition: .2s ease-in;
+    transition: .25s ease-in;
 }
 @media only screen and (max-width:  1156px) {
     .hero-button {

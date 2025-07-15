@@ -79,7 +79,7 @@ acs.forEach(ac => {
 
 
 const modal = document.querySelector("#order-modal");
-const openButton = document.querySelector("#open-button");
+const contactButton = document.querySelector(".nav-contact-button");
 const closeButton = document.querySelector("#close-button");
 
 modal.addEventListener("click", e => {
@@ -97,3 +97,7 @@ modal.addEventListener("click", e => {
 closeButton.addEventListener("click", () => {
     modal.close();
 });
+
+contactButton.addEventListener("click", () => {
+    modal.showModal();
+})
