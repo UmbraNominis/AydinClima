@@ -9,8 +9,34 @@
 }
 
 @font-face {
-    font-family: "montserrat";
-    src: url(Resources/Fonts/Montserrat-VariableFont_wght.ttf);
+    font-family: 'Montserrat';
+    src: url('Resources/Fonts/subset-Montserrat-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('Resources/Fonts/subset-Montserrat-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('Resources/Fonts/subset-Montserrat-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: bold;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('Resources/Fonts/subset-Montserrat-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
     font-display: swap;
 }
 
