@@ -778,11 +778,12 @@ body {
 
 .ac-button-instagram {
     background: linear-gradient(to right,#833ab4,#fd1d1d,#fcb045);
-    border-color: #fcb045;
+    border-color: unset;
 }
 .ac-button-instagram:hover {
     background-color: none;
-    border-color: #fd1d1d;
+    border-color: unset;
+    overflow: hidden;
 }
 /* #endregion */
 
