@@ -143,11 +143,13 @@ body {
     background-color: var(--accent-color-darker);
     border-color: var(--accent-color-darker);
     color: white;
-    scale: 0.99;
+    transform: scale(0.99);
 }
 
 .nav-contact-svg {
     fill: var(--accent-color);
+    height: auto;
+    width: clamp(1.2rem, 1.5vw, 1.9rem);
     transition: .25s ease-out;
 }
 .nav.sticky .nav-contact-svg {
@@ -155,6 +157,7 @@ body {
 }
 .nav-contact-button:hover .nav-contact-svg {
     fill: white;
+    transform: scale(0.99);
 }
 
 .nav-contact-button-mobile {
@@ -740,8 +743,6 @@ body {
 .ac-button-svg {
     height: auto;
     width: clamp(1.2rem, 1.5vw, 1.9rem);
-    display: inline-flex;
-    vertical-align: middle;
     fill: white;
 }
 /* For Small Phones */
