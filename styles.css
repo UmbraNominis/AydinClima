@@ -85,6 +85,7 @@ body {
 .nav-brand-text {
     margin: 0;
     justify-self: start;
+    align-self: center;
     font-size: clamp(1.4rem, 2vw, 3rem);
     font-weight: 600;
     color: white;
