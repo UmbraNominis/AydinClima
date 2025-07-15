@@ -80,6 +80,7 @@ acs.forEach(ac => {
 
 const modal = document.querySelector("#order-modal");
 const contactButton = document.querySelector(".nav-contact-button");
+const contactButtonMobile = document.querySelector(".nav-contact-button-mobile");
 const closeButton = document.querySelector("#close-button");
 
 modal.addEventListener("click", e => {
@@ -100,4 +101,8 @@ closeButton.addEventListener("click", () => {
 
 contactButton.addEventListener("click", () => {
     modal.showModal();
-})
+});
+
+contactButtonMobile.addEventListener("click", () => {
+    modal.showModal();
+});

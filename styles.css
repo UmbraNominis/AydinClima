@@ -65,7 +65,7 @@ body {
 }
 @media only screen and (max-width:  1156px) {
     .nav {
-        grid-template-columns: 1fr auto;
+        grid-template-columns: 1fr auto auto;
     }
 }
 
@@ -91,6 +91,11 @@ body {
     font-weight: 600;
     color: white;
     transition: .25s ease-out;
+}
+@media only screen and (max-width:  1156px) {
+    .nav-brand-text {
+        margin-left: 2vw;
+    }
 }
 .nav.sticky .nav-brand-text {
     transform: scale(0.9);
@@ -142,14 +147,38 @@ body {
 }
 
 .nav-contact-svg {
-    color: var(--accent-color);
+    fill: var(--accent-color);
     transition: .25s ease-out;
 }
 .nav.sticky .nav-contact-svg {
     transform: scale(0.9);
 }
 .nav-contact-button:hover .nav-contact-svg {
-    color: white;
+    fill: white;
+}
+
+.nav-contact-button-mobile {
+    display: none;
+}
+@media only screen and (max-width:  1156px) {
+    .nav-contact-button-mobile {
+        height: max-content;
+        padding: 10px;
+        align-self: center;
+        display: inline-flex;
+        align-items: center;
+        border: none;
+        border-radius: 10px;
+        color: var(--accent-color);
+        background-color: transparent;
+        cursor: pointer;
+        transition: .25s;
+    }
+}
+
+.nav-contact-button-mobile .nav-contact-svg {
+    height: auto;
+    width: 1.7rem;
 }
 
 .nav-links {
@@ -201,7 +230,7 @@ body {
     height: 40px;
     width: 40px;
     position: relative;
-    margin-right: 1vw;
+    margin-right: 2vw;
     display: none;
     align-self: center;
     justify-items: center;
@@ -213,7 +242,7 @@ body {
 }
 .hamburger .bar {
     height:  3px;
-    width: 100%;
+    width: 90%;
     position: absolute;
     top: 50%;
     left: 50%;
