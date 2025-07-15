@@ -755,9 +755,38 @@ body {
 .order-modal {
     border-radius: 10px;
     border-color: white;
+    transition: display 0.25s allow-discrete, overlay 0.25s allow-discrete, opacity 0.25s;
+    animation: model-close 0.25s forwards;
+    
+    &[open] {
+        animation: model-open 0.25s forwards;
+    }
+
+    &::backdrop {
+        background-color: var(--primary-color-transparent);
+        animation: model-close 0.25s forwards;
+    }
+
+    &[open]::backdrop {
+        animation: model-open 0.25s;
+    }
 }
-.order-modal::backdrop {
-    background-color: var(--primary-color-transparent);
+
+@keyframes model-open {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+@keyframes model-close {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
 }
 
 .order-container {
