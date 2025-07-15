@@ -747,6 +747,24 @@ body {
     background-color: #128c7e;
     border-color: #128c7e;
 }
+
+.ac-button-facebook {
+    background-color: #1877F2;
+    border-color: #1877F2;
+}
+.ac-button-facebook:hover {
+    background-color: #3B5998;
+    border-color: #3B5998;
+}
+
+.ac-button-instagram {
+    background: linear-gradient(to right,#833ab4,#fd1d1d,#fcb045);
+    border-color: #fcb045;
+}
+.ac-button-instagram:hover {
+    background-color: none;
+    border-color: #fd1d1d;
+}
 /* #endregion */
 
 /* #region WhyUs */
