@@ -83,7 +83,8 @@ body {
 }
 
 .nav-brand-text {
-    margin: 0;
+    margin-left: 1vw;
+    margin-block: 0;
     justify-self: start;
     align-self: center;
     font-size: clamp(1.4rem, 2vw, 3rem);
@@ -200,7 +201,7 @@ body {
     height: 40px;
     width: 40px;
     position: relative;
-    margin-right: 2vw;
+    margin-right: 1vw;
     display: none;
     align-self: center;
     justify-items: center;
@@ -351,7 +352,7 @@ body {
 }
 
 .hero-text {
-    margin-left: 28px;
+    margin-left: 1vw;
     display: flex;
     flex-grow: 1;
     flex-direction: column;
@@ -527,6 +528,11 @@ body {
     object-fit: cover;
 }
 @media only screen and (max-width:  1156px) {
+    .ac-image {
+        height: 20vw;
+    }
+}
+@media only screen and (max-width:  768px) {
     .ac-image {
         height: 40vw;
     }
