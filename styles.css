@@ -191,7 +191,10 @@ body {
 .nav-link.active {
     opacity: 50%;
     cursor: default;
-    background-color: var(--accent-color-darker);
+}
+
+.nav-link.active:hover {
+    background-color: unset;
 }
 
 .hamburger {
