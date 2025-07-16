@@ -79,6 +79,7 @@ body {
 
 /* #region NavBar */
 .nav {
+    z-index: 1;
     position: absolute;
     top: 0;
     width: 100%;
@@ -87,23 +88,28 @@ body {
     justify-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     transition: .25s ease-out;
-    z-index: 1;
+
+    &.sticky {
+        position: fixed;
+        top: 0%;
+        background-color: white;
+        box-shadow: 1px 0px 5px rgb(0, 0, 0, 50%);
+        transition: .25s ease-out;
+    }
+
+    &.non-home {
+        position: sticky;
+    }
+    &.non-home.sticky {
+        position: sticky;
+    }
 }
 @media only screen and (max-width:  1156px) {
     .nav {
         grid-template-columns: 1fr auto auto;
     }
-}
-
-.nav.sticky {
-    position: fixed;
-    top: 0%;
-    background-color: white;
-    box-shadow: 1px 0px 5px rgb(0, 0, 0, 50%);
-    transition: .25s ease-out;
-}
-@media only screen and (max-width:  1156px) {
-    .nav.sticky {
+    
+    &.sticky {
         background-color: var(--primary-color);
     }
 }
@@ -232,6 +238,7 @@ body {
     color: white;
     cursor: pointer;
     transition: .25s ease-out;
+    text-decoration: none;
 }
 .nav.sticky .nav-link {
     font-size: clamp(1rem, 1.2vw, 2rem);
@@ -475,6 +482,7 @@ body {
     align-self: flex-start;
     font-size: clamp(1.3rem, 2vw, 2.5rem);
     font-weight: 600;
+    text-decoration: none;
     color: white;
     background-color: var(--accent-color-darker);
     border: solid var(--accent-color-darker) 2px;
