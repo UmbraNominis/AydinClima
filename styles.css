@@ -107,10 +107,10 @@ body {
 @media only screen and (max-width:  1156px) {
     .nav {
         grid-template-columns: 1fr auto auto;
-    }
-    
-    &.sticky {
-        background-color: var(--primary-color);
+
+        &.sticky {
+            background-color: var(--primary-color);
+        }
     }
 }
 
