@@ -783,11 +783,11 @@ body {
 
     &::backdrop {
         background-color: var(--primary-color-transparent);
-        animation: modal-close 0.25s forwards;
+        animation: backdrop-close 0.25s forwards;
     }
 
     &[open]::backdrop {
-        animation: modal-open 0.25s;
+        animation: backdrop-open 0.25s forwards;
     }
 }
 
@@ -809,6 +809,25 @@ body {
     to {
       opacity: 0;
       display: none;
+    }
+}
+
+@keyframes backdrop-open {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+      display: block;
+    }
+}
+@keyframes backdrop-close {
+    from {
+      opacity: 1;
+      display: block;
+    }
+    to {
+      opacity: 0;
     }
 }
 
