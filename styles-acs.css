@@ -29,7 +29,7 @@ html {
 
 @media only screen and (min-width:  1100px) {
     .search-container.sticky {
-        top: clamp(3.3rem + 6svh, 4vw, 6rem + 6svh);
+        top: clamp(3.3rem + 3svh, 5vw, 6rem + 3svh);
         position: sticky;
     }
 }
@@ -60,9 +60,6 @@ html {
     border: 1px solid var(--primary-color);
 }
 
-.search-container.sticky .search-box {
-    min-width: 70%;
-}
 @media only screen and (max-width:  1156px) {
     .search-container.sticky .search-box {
         min-width: 90%;
@@ -71,11 +68,11 @@ html {
 
 .search-svg {
     height: auto;
-    width: clamp(1rem, 3vw, 2rem);
+    width: clamp(1rem, 3vw, 1.7rem);
 }
 
 .search {
-    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-size: clamp(1.5rem, 3vw, 1.7rem);
     border: none;
     background-color: transparent;
     outline: none;
