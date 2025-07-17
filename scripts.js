@@ -105,3 +105,23 @@ contactButton.addEventListener("click", () => {
 contactButtonMobile.addEventListener("click", () => {
     modal.showModal();
 });
+
+const search = document.querySelector("#search");
+console.log(search);
+if (search != null) {
+    
+    const acCards = document.querySelectorAll(".ac-card");
+    console.log(acCards);
+    
+    search.addEventListener("input", (e) => {
+        console.log(e.target.value);
+
+        acCards.forEach(child => {
+            let matchesQuery = child.querySelector(".ac-title").textContent.includes(e.target.value) 
+            || child.querySelector(".ac-brand").textContent.includes(e.target.value);
+            child.classList.toggle("hidden", !matchesQuery);
+        });
+    });
+
+
+}
