@@ -25,8 +25,22 @@ html {
     align-items: center;
     gap: 1vw;
     transition: .25s ease-out;
+}
 
-    &.sticky {
+@media only screen and (min-width:  1100px) {
+    .search-container.sticky {
+        top: clamp(3.3rem + 6svh, 4vw, 6rem + 6svh);
+        position: sticky;
+    }
+}
+@media only screen and (max-width:  1099px) {
+    .search-container.sticky {
+        top: clamp(3.3rem + 3svh, 4vw, 6rem + 3svh);
+        position: sticky;
+    }
+}
+@media only screen and (max-width:  859px) {
+    .search-container.sticky {
         top: clamp(3.3rem + 1svh, 3vw, 6rem + 1svh);
         position: sticky;
     }
