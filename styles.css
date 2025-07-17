@@ -93,7 +93,7 @@ body {
 
 /* #region NavBar */
 .nav {
-    z-index: 1;
+    z-index: 3;
     position: absolute;
     top: 0;
     width: 100%;
@@ -113,7 +113,6 @@ body {
 
     &.non-home {
         position: sticky;
-        box-shadow: 1px 0px 5px rgb(0, 0, 0, 50%);
     }
     &.non-home.sticky {
         position: sticky;
@@ -347,7 +346,7 @@ body {
 .mobile-menu {
     z-index: 2;
     display: none;
-    height: 100svh;
+    height: 100vh;
     width: 100%;
     position: absolute;
     top: 0;
@@ -355,7 +354,7 @@ body {
     background: white;
     overflow: hidden;
     touch-action: none;
-    transition: .3s ease;
+    transition: .25s ease;
 }
 @media only screen and (max-width:  1156px) {
     .mobile-menu {
@@ -372,6 +371,10 @@ body {
 }
 
 .mobile-menu .nav-link {
+    color: black;
+    font-size: 2rem;
+}
+.nav.sticky .mobile-menu .nav-link {
     color: black;
     font-size: 2rem;
 }
@@ -571,7 +574,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 1vw;
-    row-gap: 1vw;
+    grid-row-gap: 1vw;
 }
 @media only screen and (max-width:  1156px) {
     .ac-best-selling {
@@ -699,7 +702,6 @@ body {
 
 .ac-body {
     margin-bottom: 1.5vw;
-    margin-top: 0;
     text-align: center;
     font-size: clamp(0.9rem, 0.8vw, 1.2rem);
 }
