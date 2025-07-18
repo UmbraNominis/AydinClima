@@ -13,7 +13,13 @@ const acBestSelling = document.querySelector(".ac-best-selling");
 
 acs.forEach(ac => {
     let card = document.createElement("div");
+
     card.setAttribute("content-visibility", "auto");
+    card.setAttribute("data-brand", ac.brand);
+    card.setAttribute("data-energy-class-cooling", ac["energyclass-cooling"]);
+    card.setAttribute("data-energy-class-heating", ac["energyclass-heating"]);
+    card.setAttribute("data-capacity", ac.capacity);
+
     card.className = "ac-card";
     card.innerHTML = `
         <img class="ac-image" loading="lazy" decoding="async" src="${ac["image-url"]}">
@@ -72,22 +78,40 @@ document.addEventListener('click', (event) => {
 });
 
 const search = document.querySelectorAll("#search");
-
-if (search != null) {
     
-    const acCards = document.querySelectorAll(".ac-card");
+const acCards = document.querySelectorAll(".ac-card");
     
-    search[0].addEventListener("input", (e) => {
-        acCards.forEach(child => {
-            let matchesQuery = child.querySelector(".ac-title").textContent.toLowerCase().includes(e.target.value.toLowerCase());
-            child.classList.toggle("hidden", !matchesQuery);
-        });
-    });
+search[0].addEventListener("input", (e) => {
+    filter();
+});
+search[1].addEventListener("input", (e) => {
+    filter();
+});
 
-    search[1].addEventListener("input", (e) => {
-        acCards.forEach(child => {
-            let matchesQuery = child.querySelector(".ac-title").textContent.toLowerCase().includes(e.target.value.toLowerCase());
-            child.classList.toggle("hidden", !matchesQuery);
-        });
+const checkboxes = document.querySelectorAll(".filter-checkbox");
+checkboxes.forEach(checkbox => {
+    checkbox.addEventListener("change", () => {
+        filter();
+    })
+})
+
+function filter() {
+    acCards.forEach(card => {
+    
+        let matchesQuery = card.querySelector(".ac-title").textContent.toLowerCase().includes(search[0].value.toLowerCase());
+        
+        const checkedCheckboxes = document.querySelectorAll(".filter-checkbox:checked");
+
+        let checkboxMatch = true;
+        checkedCheckboxes.forEach(checkbox => {
+            const group = checkbox.dataset.filterGroup;
+            const value = checkbox.value;
+            
+            if (card.dataset[group] != value) {
+                checkboxMatch = false;
+            }
+        })
+
+        card.classList.toggle("hidden", !(matchesQuery && checkboxMatch));
     });
 }
