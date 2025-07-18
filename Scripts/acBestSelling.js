@@ -1,5 +1,5 @@
 let module;
-if (document.URL !== "https://umbranominis.github.io/AydinClima/" && document.URL !== "https://umbranominis.github.io/AydinClima/acs.html") {
+if (document.URL !== "https://umbranominis.github.io/AydinClima/index.html" && document.URL !== "https://umbranominis.github.io/AydinClima/acs.html") {
     module = await import ("/Data/air-conditioners.json", { with: { type: "json" } });
 }
 else {
