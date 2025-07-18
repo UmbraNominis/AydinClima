@@ -115,7 +115,6 @@ body {
         position: sticky;
     }
     &.non-home.sticky {
-        position: sticky;
     }
 }
 @media only screen and (max-width:  1156px) {

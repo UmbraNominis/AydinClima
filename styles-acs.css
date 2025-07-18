@@ -2,28 +2,12 @@ html {
     scrollbar-gutter: stable; /* Reserve Space for the ScrollBar fixing layout shifts */
 }
 
-.search-header {
-    margin-block: 0.4vw;
-    padding-inline: 5vw;
-    font-size: clamp(1.6rem, 4vw, 2.7rem);
-    font-weight: 500;
-    text-align: center;
-}
-@media only screen and (max-width:  1156px) {
-    .search-header {
-        
-    }
-}
-
 .search-container {
-    z-index: 1;
     display: flex;
-    flex-direction: column;
-    padding-inline: 5vw;
     padding-block: 1vw;
-    margin-bottom: 0.4vw;
+    flex-direction: column;
     align-items: center;
-    gap: 1vw;
+    grid-column: span 3;
     transition: .25s ease-out;
 }
 
@@ -47,7 +31,6 @@ html {
 }
 
 .search-box {
-    min-width: 40%;
     padding: 1vw;
     display: inline-flex;
     justify-content: center;
@@ -57,18 +40,18 @@ html {
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.50);
     background-color: white;
     transition: .25s ease-out;
-    border: 1px solid var(--primary-color);
-}
-
-@media only screen and (max-width:  1156px) {
-    .search-container.sticky .search-box {
-        min-width: 90%;
-    }
 }
 
 .search-svg {
     height: auto;
-    width: clamp(1rem, 3vw, 1.7rem);
+    width: clamp(1.5rem, 3vw, 1.7rem);
+}
+
+.filter-svg {
+    height: auto;
+    width: clamp(1.5rem, 3vw, 1.7rem);
+    fill: var(--accent-color);
+    cursor: pointer;
 }
 
 .search {
@@ -76,6 +59,37 @@ html {
     border: none;
     background-color: transparent;
     outline: none;
-    flex-grow: 1;
-    max-width: 90%;
+}
+
+.filter-menu{
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    height: 100vh;
+    width: 30%;
+    border-right: 1px solid black;
+    background-color: white;
+    transition: .25s ease-out;
+}
+
+@media only screen and (max-width:  1156px) {
+    .filter-menu{
+        width: 60%;
+    }
+}
+
+.filter-menu.active{
+    left: 0px;
+}
+
+.checkbox-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1vw;
+}
+
+.checkbox-group-name {
+    padding-inline: 1vw;
 }

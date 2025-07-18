@@ -8,48 +8,9 @@ else {
 
 let acs = module.default;
 
-
-const hamburger = document.querySelector(".hamburger");
-const mobileMenu = document.querySelector(".mobile-menu");
-
-hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    mobileMenu.classList.toggle("active");
-});
-
-const nav = document.querySelector(".nav");
-const watch = document.createElement("div"); // Create a Div that Will be Used to Tell when the Navbar went Offscreen
-watch.setAttribute("js-scroll-watcher", ""); // Set an Attribute for Clarity
-nav.before(watch); // Place the Div Before the Navbar
-
-function observerCallback(payload){
-    nav.classList.toggle("sticky", !payload[0].isIntersecting); // Toggle the sticky class of the Navbar depending on wether the Scroll Div is Visible
-    
-    // Optimize this
-    if (!payload[0].isIntersecting) document.querySelector('meta[name="theme-color"]').setAttribute('content', '#2b6bec');
-        else document.querySelector('meta[name="theme-color"]').setAttribute('content', '#2d4470');
-}
-
-const observer = new IntersectionObserver(observerCallback);
-observer.observe(watch);
-
-const searchBox = document.querySelector(".search-container");
-if (searchBox != null)
-{
-    const searchHeader = document.querySelector(".search-header");
-    const watchSearch = document.createElement("div");
-    watchSearch.setAttribute("js-scroll-watcher-search", "");
-    searchHeader.before(watchSearch);
-
-    function observerCallback2(payload){
-        console.log(payload[0].isIntersecting);
-        searchBox.classList.toggle("sticky", !payload[0].isIntersecting);
-    }
-    const observer2 = new IntersectionObserver(observerCallback2);
-    observer2.observe(watchSearch);
-}
-
+const modal = document.querySelector("#order-modal");
 const acBestSelling = document.querySelector(".ac-best-selling");
+
 acs.forEach(ac => {
     let card = document.createElement("div");
     card.className = "ac-card";
@@ -89,53 +50,3 @@ acs.forEach(ac => {
     });
     acBestSelling.appendChild(card);
 });
-
-
-const modal = document.querySelector("#order-modal");
-const contactButton = document.querySelector(".nav-contact-button");
-const contactButtonMobile = document.querySelector(".nav-contact-button-mobile");
-const closeButton = document.querySelector("#close-button");
-
-modal.addEventListener("click", e => {
-  const modalDimensions = modal.getBoundingClientRect()
-  if (
-    e.clientX < modalDimensions.left ||
-    e.clientX > modalDimensions.right ||
-    e.clientY < modalDimensions.top ||
-    e.clientY > modalDimensions.bottom
-  ) {
-    modal.close()
-  }
-});
-
-closeButton.addEventListener("click", () => {
-    modal.close();
-});
-
-contactButton.addEventListener("click", () => {
-    modal.showModal();
-});
-
-contactButtonMobile.addEventListener("click", () => {
-    modal.showModal();
-});
-
-const search = document.querySelector("#search");
-console.log(search);
-if (search != null) {
-    
-    const acCards = document.querySelectorAll(".ac-card");
-    console.log(acCards);
-    
-    search.addEventListener("input", (e) => {
-        console.log(e.target.value);
-
-        acCards.forEach(child => {
-            let matchesQuery = child.querySelector(".ac-title").textContent.includes(e.target.value) 
-            || child.querySelector(".ac-brand").textContent.includes(e.target.value);
-            child.classList.toggle("hidden", !matchesQuery);
-        });
-    });
-
-
-}
