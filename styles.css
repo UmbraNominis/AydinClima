@@ -100,24 +100,24 @@ body {
 /* #endregion */
 
 /* #region NavBar */
-.nav {
-    z-index: 3;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    padding-top: 1svh;
-    display: grid;
-    justify-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    transition: .25s ease-out;
-
-    &.sticky {
+    .nav {
+        z-index: 3;
         position: fixed;
-        top: 0%;
-        background-color: white;
-        box-shadow: 1px 0px 5px rgb(0, 0, 0, 50%);
+        top: 0;
+        width: 100%;
+        padding-top: 1svh;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
         transition: .25s ease-out;
-    }
+
+        &.sticky {
+            position: fixed;
+            top: 0%;
+            background-color: white;
+            box-shadow: 1px 0px 5px rgb(0, 0, 0, 50%);
+            transition: .25s ease-out;
+        }
 
     &.non-home {
         position: sticky;
