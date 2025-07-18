@@ -1,4 +1,4 @@
-const search = document.querySelector("#search");
+const search = document.querySelectorAll("#search");
 console.log(search);
 if (search != null) {
     

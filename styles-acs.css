@@ -2,27 +2,46 @@ html {
     scrollbar-gutter: stable; /* Reserve Space for the ScrollBar fixing layout shifts */
 }
 
+.nav-search-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media only screen and (max-width:  1156px) {
+    .nav-search-container {
+        display: none;
+    }
+}
+
 .search-container {
     width: 100%;
-    padding-bottom: 0.5vw;
-    margin-inline: 2vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    grid-column: 2;
     transition: .25s ease-out;
 }
 
+.search-container-mobile {
+    display: none;
+}
+
 @media only screen and (max-width:  1156px) {
-    .search-container {
+    .search-container-mobile {
+        width: 100%;
+        padding-bottom: 0.5vw;
+        margin-inline: 2vw;
+        display: flex;
+        flex-direction: column;
         grid-column: span 3;
+        align-items: center;
+        transition: .25s ease-out;
     }
 }
 
 .search-box {
-    width: 90%;
-    padding: 0.5vw;
-    padding-inline: 1vw;
+    padding: 1vw;
+    padding-inline: 2vw;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -46,7 +65,7 @@ html {
 }
 
 .search {
-    font-size: clamp(1.5rem, 3vw, 1.7rem);
+    font-size: clamp(1.3rem, 3vw, 1.5rem);
     border: none;
     background-color: transparent;
     outline: none;
@@ -59,8 +78,8 @@ html {
     top: 0;
     left: -100vw;
     height: 100vh;
-    width: 30%;
-    border-right: 1px solid black;
+    width: 2%;
+    border-right: 1px solid rgba(0, 0, 0, 0.50);
     background-color: white;
     transition: .25s ease-out;
 }
@@ -76,9 +95,10 @@ html {
 }
 
 .checkbox-container {
+    margin-left: 5vw;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: left;
     gap: 1vw;
 }
 
