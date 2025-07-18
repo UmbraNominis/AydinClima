@@ -40,9 +40,17 @@
     font-display: swap;
 }
 
+@font-face { /* For Reducing CLS */
+    font-family: "Adjusted Verdana Fallback";
+    src: local(Verdana);
+    size-adjust: 93%;
+    ascent-override: normal;
+    descent-override: normal;
+    line-gap-override: normal;
+}
+
 * {
-    font-family: "montserrat";
-    /* outline: 1px solid red; To check overflows */
+    font-family: "montserrat", "Adjusted Verdana Fallback";
 }
 
 body {
