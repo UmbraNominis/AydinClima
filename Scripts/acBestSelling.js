@@ -13,9 +13,10 @@ const acBestSelling = document.querySelector(".ac-best-selling");
 
 acs.forEach(ac => {
     let card = document.createElement("div");
+    card.setAttribute("content-visibility", "auto");
     card.className = "ac-card";
     card.innerHTML = `
-        <img class="ac-image" loading="lazy" src="${ac["image-url"]}">
+        <img class="ac-image" loading="lazy" decoding="async" src="${ac["image-url"]}">
         <h3 class="ac-title">${ac.brand} ${ac.name}</h3>
         <div class="ac-hot-cold-cards">
             <div class="ac-hot-cold-card ac-hot-cold-card-snow">
