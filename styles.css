@@ -107,8 +107,8 @@ body {
         width: 100%;
         padding-top: 1svh;
         display: grid;
-        justify-items: center;
         grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
         transition: .25s ease-out;
 
         &.sticky {

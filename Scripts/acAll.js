@@ -60,25 +60,26 @@ acs.forEach(ac => {
 
 const filterButton = document.querySelectorAll(".filter-svg");
 const filterMenu = document.querySelector(".filter-menu");
+const filterContainer = document.querySelector(".filter-container");
 
 filterButton[0].addEventListener("click", () => {
-    filterMenu.classList.toggle("active");
+    filterContainer.classList.toggle("active");
     event.stopPropagation(); 
 });
 filterButton[1].addEventListener("click", () => {
-    filterMenu.classList.toggle("active");
+    filterContainer.classList.toggle("active");
     event.stopPropagation(); 
 });
 
-document.addEventListener('click', (event) => {
+filterContainer.addEventListener('click', (event) => {
   // Check if the flyout is open and the click was outside of it
-  if (filterMenu.classList.contains('active') && !filterMenu.contains(event.target)) {
-    filterMenu.classList.remove('active');
+  if (!filterMenu.contains(event.target)) {
+    filterContainer.classList.remove('active');
   }
 });
 
 const search = document.querySelectorAll("#search");
-    
+const searchForm = document.querySelectorAll("#search-form");
 const acCards = document.querySelectorAll(".ac-card");
     
 search[0].addEventListener("input", (e) => {
@@ -86,6 +87,15 @@ search[0].addEventListener("input", (e) => {
 });
 search[1].addEventListener("input", (e) => {
     filter();
+});
+
+searchForm[0].addEventListener("submit", (e) => {
+    event.preventDefault(); 
+    document.activeElement.blur();
+});
+searchForm[1].addEventListener("submit", (e) => {
+    event.preventDefault(); 
+    document.activeElement.blur();
 });
 
 const checkboxes = document.querySelectorAll(".filter-checkbox");
@@ -98,17 +108,17 @@ checkboxes.forEach(checkbox => {
 function filter() {
     acCards.forEach(card => {
     
-        let matchesQuery = card.querySelector(".ac-title").textContent.toLowerCase().includes(search[0].value.toLowerCase());
+        let matchesQuery = card.querySelector(".ac-title").textContent.toLowerCase().includes(search[0].value.toLowerCase() || search[1].value.toLowerCase());
         
         const checkedCheckboxes = document.querySelectorAll(".filter-checkbox:checked");
 
-        let checkboxMatch = true;
+        let checkboxMatch = checkedCheckboxes.length === 0;
         checkedCheckboxes.forEach(checkbox => {
             const group = checkbox.dataset.filterGroup;
             const value = checkbox.value;
             
-            if (card.dataset[group] != value) {
-                checkboxMatch = false;
+            if (card.dataset[group] == value) {
+                checkboxMatch = true;
             }
         })
 

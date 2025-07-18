@@ -28,14 +28,18 @@ html {
 
 @media only screen and (max-width:  1156px) {
     .search-container-mobile {
-        width: 100%;
-        padding-bottom: 0.5vw;
+        max-width: 100%;
+        padding: 0.5vw;
         margin-inline: 2vw;
         display: flex;
         flex-direction: column;
         grid-column: span 3;
         align-items: center;
         transition: .25s ease-out;
+    }
+
+    .nav.sticky .search-container-mobile {
+        transform: scale(0.99);
     }
 }
 
@@ -47,7 +51,7 @@ html {
     align-items: center;
     border-radius: 10px;
     gap: 1vw;
-    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.50);
+    border: 1px solid var(--primary-color);
     background-color: white;
     transition: .25s ease-out;
 }
@@ -65,7 +69,7 @@ html {
 }
 
 .search {
-    font-size: clamp(1.3rem, 3vw, 1.5rem);
+    font-size: clamp(1rem, 3vw, 1.5rem);
     border: none;
     background-color: transparent;
     outline: none;
@@ -73,15 +77,34 @@ html {
 }
 
 .filter-menu{
-    z-index: 3;
-    position: fixed;
     top: 0;
     left: -100vw;
     height: 100vh;
     width: 25%;
-    border-right: 1px solid rgba(0, 0, 0, 0.50);
     background-color: white;
     transition: .25s ease-out;
+}
+
+.filter-container.active .filter-menu{
+    left: 0px;
+}
+
+.filter-container {
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    max-width: 100%;
+    left: -100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.20);
+    opacity: 0;
+    transition: .25s ease-out;
+
+    &.active{
+        left: 0px;
+        opacity: 1;
+    }
 }
 
 @media only screen and (max-width:  1156px) {
@@ -90,12 +113,8 @@ html {
     }
 }
 
-.filter-menu.active{
-    left: 0px;
-}
-
 .checkbox-container {
-    margin-left: 1vw;
+    padding-left: 2vw;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -103,4 +122,15 @@ html {
 }
 
 .checkbox-group-name {
+    text-align: left;
+    padding-left: 2vw;
+    margin-bottom: 0;
+}
+
+.checkbox-group {
+    padding-left: 2vw;
+}
+
+.ac-best-selling {
+    padding-top: 1vw;
 }
