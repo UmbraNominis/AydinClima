@@ -37,7 +37,6 @@ acs.forEach(ac => {
                 <b style="font-weight: 550;">Капацитет:</b> ${ac.capacity} Btu<br>
                 <b style="font-weight: 550;">Размер В х Ш х Д:</b> ${ac.dimensions}<br>
                 <b style="font-weight: 550;">Звуково налягане:</b> ${ac.sound} dB<br>
-                <b style="font-weight: 550;">Работа до:</b> ${ac["lowest-temp"]}<sup>o</sup><br>
                 <b style="font-weight: 550;">Гаранция:</b> ${ac.warranty} месеца<br>
             </p>
         </div>
