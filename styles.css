@@ -287,10 +287,14 @@ body {
 .nav.sticky .nav-link:hover {
     color: white;
 }
+.nav.non-home .nav-link:hover {
+    color: white;
+}
 
 .nav-link.active {
     opacity: 50%;
     cursor: default;
+    pointer-events: none;
 }
 
 .nav-link.active:hover {
