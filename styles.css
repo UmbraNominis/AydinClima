@@ -126,8 +126,6 @@ body {
     &.non-home {
         position: sticky;
     }
-    &.non-home.sticky {
-    }
 }
 @media only screen and (max-width:  1156px) {
     .nav {
@@ -283,6 +281,11 @@ body {
 
 .nav-link:hover {
     background-color: var(--accent-color-darker);
+}
+@media only screen and (max-width:  1156px) {
+    .nav-link:hover {
+        background-color: white;
+    }
 }
 .nav.sticky .nav-link:hover {
     color: white;
