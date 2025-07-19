@@ -163,6 +163,7 @@ body {
     background-color: white;
     border: 1px solid var(--accent-color);
     border-radius: 10px;
+    cursor: pointer;
     transition: .25s ease-out;
 
     &:hover {
