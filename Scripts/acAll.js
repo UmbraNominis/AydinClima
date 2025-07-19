@@ -60,6 +60,7 @@ acs.forEach(ac => {
 
 const filterButton = document.querySelectorAll(".filter-svg");
 const filterMenu = document.querySelector(".filter-menu");
+const filterMenuCloseButton = document.querySelector(".filter-close-button");
 const filterContainer = document.querySelector(".filter-container");
 
 filterButton[0].addEventListener("click", () => {
@@ -76,6 +77,10 @@ filterContainer.addEventListener('click', (event) => {
   if (!filterMenu.contains(event.target)) {
     filterContainer.classList.remove('active');
   }
+});
+
+filterMenuCloseButton.addEventListener("click", () => {
+    filterContainer.classList.toggle("active");
 });
 
 const search = document.querySelectorAll("#search");

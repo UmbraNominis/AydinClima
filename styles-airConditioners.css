@@ -90,6 +90,7 @@ body {
 }
 
 .filter-menu{
+    position: relative;
     top: 0;
     transform: translateX(-100%);
     height: 100vh;
@@ -150,4 +151,31 @@ body {
 
 .filter-checkbox-label {
     font-size: 1.25rem;
+}
+
+.filter-close-button {
+    position: absolute;
+    top: 1rem;
+    left: 100%;
+    padding: .3rem;
+    margin: 0;
+    transform: translate(-150%,10%);
+    background-color: white;
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+    transition: .25s ease-out;
+
+    &:hover {
+        background-color: var(--accent-color);
+        transform: scale(0.99) translate(-150%,10%);
+    }
+
+    &:hover .filter-close-button-svg {
+        fill: white;
+    }
+}
+.filter-close-button-svg {
+    width: clamp(1.6rem, 2vw, 2rem);
+    fill: var(--accent-color);
+    transition: .25s ease-out;
 }

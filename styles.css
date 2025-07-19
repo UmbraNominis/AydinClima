@@ -856,6 +856,7 @@ body {
 }
 
 .order-container {
+    position: relative;
     display: flex;
     flex-direction: column;
 }
@@ -878,7 +879,30 @@ body {
 }
 
 .order-close-button {
-    justify-content: center;
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    padding: .3rem;
+    margin: 0;
+    transform: translate(-90%,-20%);
+    background-color: white;
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+    transition: .25s ease-out;
+
+    &:hover {
+        background-color: var(--accent-color);
+        transform: scale(0.99) translate(-90%,-20%);
+    }
+
+    &:hover .order-close-button-svg {
+        fill: white;
+    }
+}
+.order-close-button-svg {
+    width: clamp(1.3rem, 2vw, 2rem);
+    fill: var(--accent-color);
+    transition: .25s ease-out;
 }
 
 .ac-button-viber {
