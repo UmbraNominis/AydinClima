@@ -1,0 +1,104 @@
+.contact-us-section {
+    display: flex;
+    width: 100vw;
+    max-width: 100%;
+    justify-content: space-around;
+    align-items: top;
+    margin-block: 2vw;
+}
+@media only screen and (max-width: 1155px) {
+    .contact-us-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+.links-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+@media only screen and (max-width: 900px) {
+    .links-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-inline: 2vw;
+    }
+}
+
+.link-block {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.50);
+    border-radius: 10px;
+}
+@media only screen and (max-width: 900px) {
+    .link-block {
+        flex-direction: column;
+        gap: 0.1rem;
+    }
+}
+
+.link-block-title {
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    font-size: clamp(1rem, 2vw, 2rem);
+    gap: 0.5rem;
+}
+@media only screen and (max-width: 900px) {
+    .link-block-title {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 1155px) {
+    .links {
+        display: flex;
+        flex-direction: row;
+        padding: 0.5rem;
+        gap: 0.2rem;
+        justify-content: center;
+    }
+}
+
+.ac-button {
+    margin: 0;
+}
+
+.svg {
+    width: 2rem;
+
+    &.phone-number {
+        fill: var(--accent-color);
+    }
+    &.facebook {
+        fill: #1877F2;
+    }
+    &.instagram {
+        fill: linear-gradient(to right,#833ab4,#fd1d1d,#fcb045);
+    }
+    &.viber {
+        fill: #7360f2;
+    }
+    &.whatsapp {
+        fill: #25D366;
+    }
+}
+
+.map {
+    width: 35vw;
+    height: 35vh;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.50);
+}
+@media only screen and (max-width: 1155px) {
+    .map {
+        width: 90vw;
+        height: 50vh;
+    }
+}
