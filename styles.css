@@ -53,6 +53,10 @@
     font-family: "montserrat", "Adjusted Verdana Fallback";
 }
 
+html {
+    scrollbar-gutter: stable; /* Reserve Space for the ScrollBar fixing layout shifts */
+}
+
 body {
     margin: 0;
     padding: 0;
