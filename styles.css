@@ -133,10 +133,14 @@ body {
     }
 }
 
-.nav-brand-text {
+.nav-brand-container {
     margin-left: 1vw;
     margin-block: 0;
     justify-self: start;
+}
+
+.nav-brand-text {
+    margin: 0;
     align-self: center;
     display: inline-flex;
     align-items: center;

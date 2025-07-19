@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#2d4470"/>
+    <meta name="description" content="Търсите надежден климатик или професионален сервиз? Айдън Клима ви предлага качествени климатици с професионален монтаж за максимална ефективност и бърз и качествен ремонт на всички марки климатици с оригинални резервни части."/>
     <title>Айдън Клима</title>
 
     <link rel="stylesheet" href="styles.css">
@@ -18,7 +19,9 @@
 
     <header class="nav">
      
-        <h2 class="nav-brand-text"><img class="nav-brand-logo" src="Resources/Images/LogoLowQ.webp">Айдън Клима</h2>
+        <a class="nav-brand-container" href="/">
+            <h2 class="nav-brand-text"><img class="nav-brand-logo" src="Resources/Images/LogoLowQ.webp" alt="Лого на Айдън Клима">Айдън Клима</h2>
+        </a>
         
         <button class="nav-contact-button">
             <svg class="nav-contact-svg" xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 16 16"><path anc fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/></svg>
@@ -29,12 +32,12 @@
             <svg class="nav-contact-svg" xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 16 16"><path anc fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/></svg>
         </button>
 
-        <div class="nav-links">
-            <a class="nav-link active">Начало</a>
+        <nav class="nav-links" aria-label="Main Navigation">
+            <a class="nav-link active" href="/" aria-current="page">Начало</a>
             <a class="nav-link" href="airConditioners.html">Климатици</a>
-            <a class="nav-link">За Нас</a>
+            <a class="nav-link" href="aboutUs.html">За Нас</a>
             <a class="nav-link" href="contactUs.html">За Контакт</a>
-        </div>
+        </nav>
         
         <div class="hamburger">
             <span class="bar"></span>
@@ -42,37 +45,15 @@
             <span class="bar"></span>
         </div>
 
-        <div class="mobile-menu">
-            <a class="nav-link active">Начало</a>
+        <nav class="mobile-menu" aria-label="Mobile Navigation">
+            <a class="nav-link active" href="/" aria-current="page">Начало</a>
             <a class="nav-link" href="airConditioners.html">Климатици</a>
-            <a class="nav-link">За Нас</a>
+            <a class="nav-link" href="aboutUs.html">За Нас</a>
             <a class="nav-link" href="contactUs.html">За Контакт</a>
-        </div>
+        </nav>
 
     </header>
 
-    <div class="hero">
-
-        <div class="hero-background"></div>
-
-        <div class="hero-text">
-            <h1 class="hero-title">Вашият партньор за<br>Комфорт и Ефективност</span></h1>
-            <p class="hero-subtitle">Продажба, Монтаж и Ремонт на Климатици и Бяла Техника</p>
-            <a class="hero-button" href="acs.html">
-                Към Климатици
-                <svg xmlns="http://www.w3.org/2000/svg" class="hero-button-svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/></svg>
-            </a>    
-        </div>
-
-    </div>
-
-    <div class="section-header-container">
-        <h2 class="section-header">Най-продавани</h2>
-        <a class="more-acs-link" href="acs.html">Разгледай още</a>
-    </div>
-
-    <div class="ac-best-selling">
-        
     <dialog class="order-modal" id="order-modal">
         <div class="order-container">
             <p class="order-title">Свържете със нас през:</p>
@@ -113,10 +94,34 @@
             <button class="order-close-button" id="close-button"><svg class="order-close-button-svg" xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 16 16"><path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/></svg></button>
         </div>
     </dialog>
-    
-    </div>
 
-    <div class="why-us-section">
+    <section class="hero">
+
+        <div class="hero-background"></div>
+
+        <div class="hero-text">
+            <h1 class="hero-title">Вашият партньор за<br>Комфорт и Ефективност</span></h1>
+            <p class="hero-subtitle">Продажба, Монтаж и Ремонт на Климатици и Бяла Техника</p>
+            <a class="hero-button" href="acs.html">
+                Към Климатици
+                <svg xmlns="http://www.w3.org/2000/svg" class="hero-button-svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/></svg>
+            </a>    
+        </div>
+
+    </section>
+
+    <section>
+        <div class="section-header-container">
+            <h2 class="section-header">Най-продавани</h2>
+            <a class="more-acs-link" href="acs.html">Разгледай още</a>
+        </div>
+
+        <div class="ac-best-selling">
+        
+        </div>
+    </section>
+
+    <section class="why-us-section">
         <div class="section-header-container">
             <h2 class="section-header">Защо да изберете Нас?</h2>
         </div>
@@ -137,6 +142,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, nam, eaque odio fuga ipsa aspernatur esse quaerat temporibus maxime minus aliquam assumenda delectus quibusdam reiciendis, rem totam error perspiciatis officiis.</p>
             </div>
         </div>
-    </div>
+    </section>
+    
 </body>
 </html>
