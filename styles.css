@@ -324,7 +324,6 @@ body {
     left: 50%;
     display: block;
     background-color: var(--accent-color);
-    border-radius: 10px;
     transform: translate(-50%, -50%);
     transition: .25s ease-out;
 }
